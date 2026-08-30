@@ -58,6 +58,124 @@ Note this does **not** mean leads are being lost. Netlify Forms + Resend still c
 
 ---
 
+## 🔴 P0 — BLOCKING AD LAUNCH TODAY: no privacy policy page
+
+**Date: 2026-08-30 · From: Marketing · Needed: before Mon Aug 31**
+
+Meta requires a **publicly reachable privacy policy URL** on every Instant Form. Without it the form cannot be published, which means the campaign cannot launch. Verified as missing:
+
+| URL | Result |
+|---|---|
+| `https://creativstudio.co/privacy` | 404 |
+| `https://creativstudio.co/privacy-policy` | 404 |
+| `https://creativstudio.co/terms` | 404 |
+
+**Request: publish a static page at `https://creativstudio.co/privacy`.** Copy below is ready to paste — no drafting needed. Please confirm the URL here or in `STATUS.md` when live.
+
+Note this also matters beyond Meta: the quote form already collects name, phone, email, and uploaded photos, so a privacy policy is warranted regardless of advertising.
+
+<details>
+<summary>Ready-to-publish privacy policy copy (click to expand)</summary>
+
+```
+# Privacy Policy
+
+**Last updated: August 30, 2026**
+
+Creative Studio ("we," "us," "our") operates creativstudio.co and advertises on
+platforms including Facebook and Instagram. This policy explains what we collect
+and how we use it.
+
+## Information we collect
+
+When you submit a quote request, contact us, or complete a form in one of our ads,
+we may collect:
+
+- Name
+- Phone number
+- Email address
+- City or service location
+- Details about your project, including type of service and timeline
+- Photos you choose to upload
+- Number of vehicles or locations, where relevant
+
+We also automatically collect limited technical information when you visit our
+website, including pages viewed, referring source, and marketing campaign
+parameters (UTM tags) used to reach us.
+
+## How we use it
+
+- To prepare and send you a quote
+- To contact you about your project by phone, text, or email
+- To follow up on an inquiry you started
+- To understand which advertising brings us customers, so we can spend our
+  marketing budget sensibly
+- To meet legal or accounting obligations
+
+We do not sell your personal information.
+
+## Who we share it with
+
+We share information only with service providers that help us operate, and only
+as needed:
+
+- Netlify (website hosting and form capture)
+- Resend (email delivery)
+- Google (analytics and tag management)
+- Meta (advertising measurement)
+- Shopify (if you place an order through our store)
+
+These providers process information on our behalf and are not permitted to use it
+for their own purposes.
+
+## Text messages
+
+If you give us your phone number, we may contact you by text about your quote.
+Message and data rates may apply. Reply STOP to any message to stop receiving
+texts from us.
+
+## Cookies and tracking
+
+Our website uses cookies and similar technologies, including Google Tag Manager
+and the Meta Pixel, to measure website activity and advertising performance. You
+can control cookies through your browser settings. You can also manage ad
+personalization in your Facebook and Instagram settings.
+
+## How long we keep it
+
+We keep quote requests and customer records for as long as needed to serve you
+and to meet legal and accounting requirements.
+
+## Your choices
+
+You may ask us to access, correct, or delete the information we hold about you.
+Contact us using the details below and we will respond.
+
+## Children
+
+Our services are intended for businesses. We do not knowingly collect
+information from anyone under 16.
+
+## Changes
+
+We may update this policy. The date at the top reflects the most recent version.
+
+## Contact us
+
+Creative Studio
+Charlotte, North Carolina
+Phone: (704) 312-0219
+Email: info@creativstudio.co
+```
+
+</details>
+
+**Tech please also confirm:** is `info@creativstudio.co` the right contact address to publish, and should a physical shop address be listed? Marketing has confirmed there is a commercial shop that customers visit, so listing it is likely fine — but that is the Owner's call, not mine.
+
+> ⚠️ This copy is a practical starting point written for a small business, not legal advice. If Creative Studio wants it reviewed by an attorney, that should happen — but publishing this is far better than publishing nothing, and Meta needs a URL today.
+
+---
+
 ## ⚠️ Documentation conflicts found — please reconcile
 
 **Date: 2026-08-30 · From: Marketing**
