@@ -25,7 +25,7 @@
 | Netlify Forms | Quote form capture + email notification | 2026-08-30 |
 | UTM tracking | Auto-captured in form submissions | 2026-08-30 |
 | tracking.js | GTM loader + UTM capture + event helpers | 2026-08-30 |
-| CTA buttons | "Get a Free Quote" → /quote on all pages | 2026-08-30 |
+| Netlify auto-deploy | Connected to GitHub repo `5h0kun1n/creative-studio`, publishes `deploy/` on every push | 2026-08-30 |
 | GTM: Meta - QuoteSubmitted | Lead event via Custom HTML + CE - QuoteSubmitted trigger | 2026-08-30 |
 | GTM: Meta - Call | Contact event via Custom HTML + CE - Call trigger | 2026-08-30 |
 
@@ -47,7 +47,7 @@
 | GTM conversion event tags (Lead, Contact) | **LIVE** — published as GTM v2 (2026-08-30) | — |
 | SMS lead notifications | Not started (owner approved) | — |
 | Shopify store DNS (shop.creativstudio.co) | Not started | Need CNAME added in domain registrar |
-| tracking.js on homepage | Code done, needs Netlify redeploy | — |
+| tracking.js on homepage | **LIVE** — deployed via Netlify auto-deploy from GitHub (2026-08-30) | — |
 | Hit Promo API integration | Waiting | Pending vendor API credentials |
 | 4over API integration | Waiting | Need to call 4over for API keys |
 
