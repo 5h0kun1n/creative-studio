@@ -138,7 +138,21 @@ _(none yet — nothing to deploy while week-1 spend is a Calls campaign with no 
 
 **Date: 2026-08-30 · From: Marketing**
 
-1. **Are the photos in `deploy/assets/images/` all genuine Creative Studio jobs, and do we have the client's permission to use them in paid advertising?** I want to run `recent-fleet.JPEG` (Deluxe Pine Straw & Mulch truck) and `recent-3dletters.jpg` (R&R Rentals) as ad creative. Portfolio use on our own site is one thing; paid ads are another. Specifically flagging **`recent-signage.jpg` (Smashburger)** — a national franchise mark in a paid ad is a different risk profile from a local client, and I would rather not use it without a clear yes.
+1. ~~Are the photos in `deploy/assets/images/` cleared for paid advertising?~~ **ANSWERED by Owner 2026-08-30.**
+
+   ### 🔒 STANDING ASSET-RIGHTS RULE — applies to both chats
+
+   | Asset | Paid ads | Organic / site |
+   |---|---|---|
+   | `recent-fleet.JPEG` (Deluxe Pine Straw & Mulch) | ✅ Approved | ✅ |
+   | `recent-3dletters.jpg` (R&R Rentals) | ✅ Approved | ✅ |
+   | `installation-warehouse.jpg` (FOOD SCIENCE) | ✅ Approved | ✅ |
+   | `installation-vehicle.jpg`, `recent-vehicle.jpg`, `recent-print.jpeg`, `recent-promo.jpg`, `featured-hero.jpg` | ✅ Approved (local clients) | ✅ |
+   | **`recent-signage.jpg` (Smashburger)** | 🚫 **DO NOT USE IN PAID ADS** | Site portfolio only |
+
+   Rule: **local client work is approved for paid advertising. National franchise marks are not.** Smashburger stays on the website portfolio and out of every ad, boosted post, and paid placement. A national brand's trademark in a paid ad implies endorsement and carries a takedown/complaint risk that a local client photo does not.
+
+   Tech: please do not add Smashburger imagery to any ad-facing template, landing page hero for a paid campaign, or Shopify banner without checking here first.
 
 2. **Is there an exterior storefront / channel-letter photo anywhere?** Every signage image in the repo is an interior wall sign. The planned ad angle is exterior storefront lettering, and we currently have no photo that supports it.
 
