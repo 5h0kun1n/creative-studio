@@ -28,9 +28,9 @@
 
 ### On creativstudio.co (Netlify)
 
-- [ ] Add GTM snippet to `<head>` of every page (in your Netlify site source)
-- [ ] Add GTM noscript to `<body>` of every page
-- [ ] The `tracking.js` file I've built handles this if loaded correctly
+- [x] Add GTM snippet to `<head>` of every page — installed via **Netlify snippet injection** (2026-08-30)
+- [x] Add GTM noscript to `<body>` of every page — installed via **Netlify snippet injection** (2026-08-30)
+- [x] The `tracking.js` file handles UTM capture, event helpers, and click-to-call binding
 
 **Test:**
 1. Open creativstudio.co in Chrome

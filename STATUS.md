@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-08-30
+- **Tech last updated:** 2026-08-30 (doc fixes, tracking.js on homepage, Marketing Q&A)
 - **Marketing last updated:** 2026-08-30
 
 ---
@@ -32,7 +32,7 @@
 | Item | Details |
 |------|---------|
 | Ad landing URL | `https://creativstudio.co/quote?utm_source=meta&utm_medium=paid&utm_campaign={name}` |
-| Meta Pixel | Active — PageView fires on all pages. Lead event fires on /thank-you |
+| Meta Pixel | Active — PageView fires on all pages. **Lead/Contact conversion events NOT YET LIVE — see IN PROGRESS (Tech).** |
 | UTM format | See TECH_HANDOFF.md for full format spec |
 | Form fields | name, phone, email, city, service, timeline, photos, message + hidden UTMs |
 | Speed-to-lead | Resend emails: ~5 sec delivery to info@creativstudio.co |
@@ -43,7 +43,9 @@
 |------|--------|---------|
 | Resend domain verification | Not started | Need to add DNS records for creativstudio.co in Resend |
 | GTM conversion event tags (Lead, Contact) | Not started | — |
+| SMS lead notifications | Not started (owner approved) | — |
 | Shopify store DNS (shop.creativstudio.co) | Not started | Need CNAME added in domain registrar |
+| tracking.js on homepage | Code done, needs Netlify redeploy | — |
 | Hit Promo API integration | Waiting | Pending vendor API credentials |
 | 4over API integration | Waiting | Need to call 4over for API keys |
 

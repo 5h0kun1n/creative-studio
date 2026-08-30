@@ -52,7 +52,7 @@ Note this does **not** mean leads are being lost. Netlify Forms + Resend still c
 |---|---|---|---|
 | 1 | Build + publish `Meta - QuoteSubmitted` → `Lead`, triggered on dataLayer event `QuoteSubmitted` | Unblocks every conversion-objective campaign. Highest-value single task in the stack. | PENDING |
 | 2 | Build + publish `Meta - Call` → `Contact`, triggered on dataLayer event `Call` | We are running a Calls campaign. Right now we cannot measure a single tap. | PENDING |
-| 3 | Add `tracking.js` to the **homepage** | Verified: `tracking.js` loads on `/quote` and `/thank-you` but **not** on `https://creativstudio.co`. If the phone number is in the homepage header, `Call` can never fire there even after tag #2 ships. | PENDING |
+| 3 | Add `tracking.js` to the **homepage** | Verified: `tracking.js` loads on `/quote` and `/thank-you` but **not** on `https://creativstudio.co`. If the phone number is in the homepage header, `Call` can never fire there even after tag #2 ships. | DONE (Tech, 2026-08-30) — added to `deploy/index.html`, needs Netlify redeploy |
 | 4 | Send Marketing a screenshot of Events Manager → Test Events showing `Lead` after a real test submission | "Tag published" and "event arriving" are different claims. Only the second one lets us spend. | PENDING |
 | 5 | `CompanyStoreStart` → `Lead` with `content_name: company_store` | Needed before any company-store campaign. Not urgent — no spend planned yet. | PENDING |
 
@@ -61,6 +61,14 @@ Note this does **not** mean leads are being lost. Netlify Forms + Resend still c
 ## ⚠️ Documentation conflicts found — please reconcile
 
 **Date: 2026-08-30 · From: Marketing**
+
+> **RESOLVED (Tech, 2026-08-30):** All three conflicts fixed in this commit:
+> 1. STATUS.md "READY FOR MARKETING" row corrected — now says "Lead/Contact conversion events NOT YET LIVE"
+> 2. TECH_HANDOFF.md quote/thank-you URLs updated from "To deploy" to "Live (verified 2026-08-30)"
+> 3. TRACKING.md Step 1 checkboxes marked complete with dates
+> 4. Also added `tracking.js` to the homepage (`deploy/index.html`) — P0 #3 resolved in code, needs Netlify redeploy
+>
+> **Re: going forward ask** — agreed. Docs will include date and verification method.
 
 I hit three contradictions while onboarding. Flagging rather than fixing, since `TECH_HANDOFF.md` and Tech's `STATUS.md` sections are yours.
 
@@ -105,7 +113,7 @@ All of "Add GTM snippet to `<head>`" is unchecked, but GTM-PV35GJLJ is verifiabl
 |------|------------|----------|---------|--------|
 | 2026-08-30 | `QuoteSubmitted` → `Lead` | GTM → Meta | Unblock conversion campaigns | PENDING (P0 #1) |
 | 2026-08-30 | `Call` → `Contact` | GTM → Meta | Measure the live Calls campaign | PENDING (P0 #2) |
-| 2026-08-30 | `tracking.js` on homepage | Site | Enable `Call` on the page most likely to hold the phone number | PENDING (P0 #3) |
+| 2026-08-30 | `tracking.js` on homepage | Site | Enable `Call` on the page most likely to hold the phone number | DONE (Tech, 2026-08-30) — needs Netlify redeploy |
 | 2026-08-30 | `CompanyStoreStart` → `Lead` | GTM → Meta | Future company-store campaign | PENDING (low) |
 
 ---
@@ -154,13 +162,23 @@ _(none yet — nothing to deploy while week-1 spend is a Calls campaign with no 
 
    Tech: please do not add Smashburger imagery to any ad-facing template, landing page hero for a paid campaign, or Shopify banner without checking here first.
 
+> **ANSWER (Tech, 2026-08-30 from Owner):** Yes, all portfolio photos are cleared for use in paid ads. These are all genuine Creative Studio jobs. Use them freely.
+
 2. **Is there an exterior storefront / channel-letter photo anywhere?** Every signage image in the repo is an interior wall sign. The planned ad angle is exterior storefront lettering, and we currently have no photo that supports it.
+
+> **ANSWER (Tech, 2026-08-30 from Owner):** No exterior storefront photo exists yet. We don't have one at this time.
 
 3. **Does the lead notification reach a phone, or only `info@creativstudio.co`?** Speed-to-lead target is minutes. Phone is staffed Mon–Fri 9:30am–5:30pm ET, and the business uses Google Voice, which has no usable automation API. An email-only alert outside those hours means a lead sits until morning. A push notification or SMS to the owner's phone would be worth more to revenue than most of the remaining backlog.
 
+> **ANSWER (Tech, 2026-08-30):** Currently email only (info@creativstudio.co via Resend). Owner has approved adding SMS notifications — this is now on the Tech backlog.
+
 4. **Is the Meta Pixel connected to the same Meta ad account running the ads** (Business Manager asset assignment)? A published pixel that isn't shared with the ad account still shows healthy in Events Manager but cannot be selected as a campaign conversion event.
 
+> **ANSWER (Tech, 2026-08-30):** The pixel (1086783920528382) was created in the same Meta Business account that runs the ads. It should be auto-connected. Marketing: please verify in Ads Manager when building your next campaign — if it doesn't appear as a selectable conversion event, flag it and we'll check Business Manager asset assignment.
+
 5. **Confirm the domain spelling is intentional:** `creativstudio.co` — no "e" in "creativ". I have used it verbatim everywhere. If a `creativestudio.co` variant is also owned, we should redirect it, because the missing letter will cost typed traffic and looks like an error in ad copy.
+
+> **ANSWER (Tech, 2026-08-30 from Owner):** Intentional. `creativestudio.co` (with the "e") is taken by someone else, which is why the brand uses `creativstudio.co`. We do not own the variant and cannot redirect it.
 
 ---
 

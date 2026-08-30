@@ -11,8 +11,8 @@
 | Page                | URL                                           | Status     |
 |---------------------|-----------------------------------------------|------------|
 | Main site           | https://creativstudio.co                      | Live       |
-| Quote form          | https://creativstudio.co/quote                | To deploy  |
-| Thank-you page      | https://creativstudio.co/thank-you            | To deploy  |
+| Quote form          | https://creativstudio.co/quote                | Live (verified 2026-08-30) |
+| Thank-you page      | https://creativstudio.co/thank-you            | Live (verified 2026-08-30) |
 | Shop                | https://shop.creativstudio.co                 | DNS pending|
 | Shop (temp)         | https://creative-studio-9720.myshopify.com    | Live       |
 
