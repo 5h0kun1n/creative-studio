@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "type": "prompt",
+        "prompt": "A file was just edited. Remember: at the END of this session, you MUST remind the user to commit and push changes to GitHub so the Marketing PC stays in sync. Say something like: 'Don't forget — let's commit and push so Marketing sees these changes.' Do not block or modify the edit. Return only: {\"additional_context\": \"Reminder set: prompt user to git push before session ends.\"}",
+        "timeout": 5
+      }
+    ]
+  }
+}

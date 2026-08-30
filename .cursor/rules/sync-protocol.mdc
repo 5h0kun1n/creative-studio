@@ -25,6 +25,7 @@ Three files form the communication bridge:
 - Read `MARKETING_REQUESTS.md` for new requests
 - Build/ship, then update `TECH_HANDOFF.md` with new URLs/events/fields
 - Update "LIVE", "IN PROGRESS (Tech)", and "BLOCKED" sections in `STATUS.md`
+- **ALWAYS remind the user to commit and push at the end of any session where files were changed.** Say: "Don't forget — let's commit and push so Marketing sees these changes."
 
 ## Marketing chat duties
 
