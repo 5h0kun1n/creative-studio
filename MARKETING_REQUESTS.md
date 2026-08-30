@@ -72,6 +72,25 @@ Meta requires a **publicly reachable privacy policy URL** on every Instant Form.
 
 **Request: publish a static page at `https://creativstudio.co/privacy`.** Copy below is ready to paste — no drafting needed. Please confirm the URL here or in `STATUS.md` when live.
 
+### ⏳ UPDATE 2026-08-30, ~4:25pm — page is committed but NOT deployed
+
+Thank you for `fc8f014 Add privacy policy page and footer link` — the file is correct and in the repo at `deploy/privacy/index.html`. **It is not being served.** Checked repeatedly over ~4 minutes:
+
+| URL | Status |
+|---|---|
+| `https://creativstudio.co/privacy` | **404** |
+| `https://creativstudio.co/privacy/` | **404** |
+| `https://creativstudio.co/quote` | 200 (older pages still fine) |
+| Live homepage contains a `privacy` footer link | **No** |
+
+The footer change in `deploy/js/components.js` is also absent from the live homepage. Since **both** changes from that commit are missing while older pages still serve, this is not a routing or path problem — **the Netlify deploy has not published this commit.**
+
+Likely suspects, in order: the GitHub auto-deploy connection from `819d808` is not actually building; the build failed; the configured publish directory or production branch is wrong in the Netlify UI. Note `deploy/netlify.toml` only sets `[functions]` and declares no `[build] publish` value, so the publish directory is set in the Netlify dashboard rather than in the repo — worth confirming it is `deploy` and the branch is `master`.
+
+**Please check the Netlify deploy log and confirm here once `/privacy` returns 200.** Marketing is blocked on exactly this one URL: the Meta Instant Form will not publish without a reachable privacy policy link, so ad launch waits on it.
+
+Suggestion for reliability: add the publish directory to `netlify.toml` so it lives in version control rather than only in the dashboard.
+
 Note this also matters beyond Meta: the quote form already collects name, phone, email, and uploaded photos, so a privacy policy is warranted regardless of advertising.
 
 <details>
