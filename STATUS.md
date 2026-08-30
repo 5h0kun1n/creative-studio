@@ -8,7 +8,7 @@
 
 ## Last sync
 - **Tech last updated:** 2026-08-30 (GTM conversion tags published — Lead + Contact live)
-- **Marketing last updated:** 2026-08-30
+- **Marketing last updated:** 2026-08-30 (fleet Instant Form LIVE)
 
 ---
 
@@ -55,12 +55,11 @@
 
 | Item | Status | Blocker |
 |------|--------|---------|
-| `CS-META-SIGNS-CALL-V00b` — Meta Calls campaign, $45 lifetime, Charlotte +25mi, age 25+, dayparted Mon–Fri 9am–6pm | Built as draft in Ads Manager. Launches **Mon Aug 31**, ends **Sep 3**. | Final ad image — see next row |
-| Ad creative selection | Choosing between `recent-fleet.JPEG` (Deluxe truck) and `recent-3dletters.jpg` (R&R Rentals) from `deploy/assets/images/` | **Needs Tech/Owner answer:** are these cleared for use in paid ads? See Q1 in `MARKETING_REQUESTS.md` |
-| Google Business Profile optimisation | Profile exists and is verified, category `Sign shop`. Audit + reviews + services/description work queued. | None — free channel, proceeding |
-| Weekly scorecard + call log | Live. Every caller is asked "Google or Facebook?" because GBP and Meta both ring the same phone. | None |
+| `CS-META-FLEET-FORM-V01` — Instant Form, $25/day, Charlotte +25mi, "Don't drive blank" | **LIVE 2026-08-30.** Higher-intent form. Leads in Meta Business Suite (Google Sheets connect failed). | None — do not edit mid-flight |
+| V00b Calls campaign | Abandoned as draft. Never published. | — |
+| Google Business Profile optimisation | Profile exists and is verified, category `Sign shop`. Audit + reviews queued. | None |
 | Q4 corporate apparel outreach | Starts Fri Sep 4 | Production lead times unconfirmed |
-| Meta Leads campaign → `/quote` | **UNBLOCKED + VERIFIED** — Lead event confirmed in Events Manager Test Events (2026-08-30 3:31 PM, status: Processed). Ready for conversion campaigns. | — |
+| Meta website campaign → `/quote` | Held. Site Lead event is live, but this week's spend is Instant Forms only. | None |
 
 > **Marketing P0 fully resolved (Tech, 2026-08-30):** All conversion tags published in GTM v2 and `Lead` event verified in Events Manager → Test Events (Processed at 3:31 PM). Marketing is clear to build conversion-objective campaigns.
 
