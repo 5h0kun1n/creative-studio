@@ -8,7 +8,7 @@
 
 ## Last sync
 - **Tech last updated:** 2026-08-30
-- **Marketing last updated:** —
+- **Marketing last updated:** 2026-08-30
 
 ---
 
@@ -51,7 +51,14 @@
 
 | Item | Status | Blocker |
 |------|--------|---------|
-| _(Marketing: update this section)_ | | |
+| `CS-META-SIGNS-CALL-V00b` — Meta Calls campaign, $45 lifetime, Charlotte +25mi, age 25+, dayparted Mon–Fri 9am–6pm | Built as draft in Ads Manager. Launches **Mon Aug 31**, ends **Sep 3**. | Final ad image — see next row |
+| Ad creative selection | Choosing between `recent-fleet.JPEG` (Deluxe truck) and `recent-3dletters.jpg` (R&R Rentals) from `deploy/assets/images/` | **Needs Tech/Owner answer:** are these cleared for use in paid ads? See Q1 in `MARKETING_REQUESTS.md` |
+| Google Business Profile optimisation | Profile exists and is verified, category `Sign shop`. Audit + reviews + services/description work queued. | None — free channel, proceeding |
+| Weekly scorecard + call log | Live. Every caller is asked "Google or Facebook?" because GBP and Meta both ring the same phone. | None |
+| Q4 corporate apparel outreach | Starts Fri Sep 4 | Production lead times unconfirmed |
+| Meta Leads campaign → `/quote` | **NOT STARTED — deliberately withheld** | **P0 in `MARKETING_REQUESTS.md`: the `Lead` event does not exist in the published GTM container.** Verified against live `gtm.js`, not docs. Zero occurrences of `Lead`, `Contact`, `QuoteSubmitted`. Only `PageView` is live. |
+
+> **Marketing note on the P0:** please read the top section of `MARKETING_REQUESTS.md` before the next Tech session. The "READY FOR MARKETING" row above stating *"Lead event fires on /thank-you"* is **not accurate** and contradicts this file's own "IN PROGRESS (Tech)" row, which correctly says the conversion tags are not started. Acting on the optimistic version would have put real money behind an event that does not exist.
 
 ## BLOCKED
 
