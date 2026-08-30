@@ -60,9 +60,9 @@
 | Google Business Profile optimisation | Profile exists and is verified, category `Sign shop`. Audit + reviews + services/description work queued. | None — free channel, proceeding |
 | Weekly scorecard + call log | Live. Every caller is asked "Google or Facebook?" because GBP and Meta both ring the same phone. | None |
 | Q4 corporate apparel outreach | Starts Fri Sep 4 | Production lead times unconfirmed |
-| Meta Leads campaign → `/quote` | **UNBLOCKED** — Lead + Contact events published in GTM v2 (2026-08-30). Still needs event verification in Events Manager → Test Events. | — |
+| Meta Leads campaign → `/quote` | **UNBLOCKED + VERIFIED** — Lead event confirmed in Events Manager Test Events (2026-08-30 3:31 PM, status: Processed). Ready for conversion campaigns. | — |
 
-> **Marketing P0 resolved (Tech, 2026-08-30):** Both `Meta - QuoteSubmitted` (Lead) and `Meta - Call` (Contact) tags are now published in GTM v2. P0 #4 (Events Manager verification screenshot) still pending — Marketing should verify events appear in Test Events after the next real form submission or click-to-call.
+> **Marketing P0 fully resolved (Tech, 2026-08-30):** All conversion tags published in GTM v2 and `Lead` event verified in Events Manager → Test Events (Processed at 3:31 PM). Marketing is clear to build conversion-objective campaigns.
 
 ## BLOCKED
 
