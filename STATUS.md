@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-08-30 (doc fixes, tracking.js on homepage, Marketing Q&A)
+- **Tech last updated:** 2026-08-30 (GTM conversion tags published — Lead + Contact live)
 - **Marketing last updated:** 2026-08-30
 
 ---
@@ -26,13 +26,15 @@
 | UTM tracking | Auto-captured in form submissions | 2026-08-30 |
 | tracking.js | GTM loader + UTM capture + event helpers | 2026-08-30 |
 | CTA buttons | "Get a Free Quote" → /quote on all pages | 2026-08-30 |
+| GTM: Meta - QuoteSubmitted | Lead event via Custom HTML + CE - QuoteSubmitted trigger | 2026-08-30 |
+| GTM: Meta - Call | Contact event via Custom HTML + CE - Call trigger | 2026-08-30 |
 
 ## READY FOR MARKETING
 
 | Item | Details |
 |------|---------|
 | Ad landing URL | `https://creativstudio.co/quote?utm_source=meta&utm_medium=paid&utm_campaign={name}` |
-| Meta Pixel | Active — PageView fires on all pages. **Lead/Contact conversion events NOT YET LIVE — see IN PROGRESS (Tech).** |
+| Meta Pixel | Active — PageView fires on all pages. **Lead fires on QuoteSubmitted, Contact fires on Call (published 2026-08-30).** |
 | UTM format | See TECH_HANDOFF.md for full format spec |
 | Form fields | name, phone, email, city, service, timeline, photos, message + hidden UTMs |
 | Speed-to-lead | Resend emails: ~5 sec delivery to info@creativstudio.co |
@@ -42,7 +44,7 @@
 | Item | Status | Blocker |
 |------|--------|---------|
 | Resend domain verification | Not started | Need to add DNS records for creativstudio.co in Resend |
-| GTM conversion event tags (Lead, Contact) | Not started | — |
+| GTM conversion event tags (Lead, Contact) | **LIVE** — published as GTM v2 (2026-08-30) | — |
 | SMS lead notifications | Not started (owner approved) | — |
 | Shopify store DNS (shop.creativstudio.co) | Not started | Need CNAME added in domain registrar |
 | tracking.js on homepage | Code done, needs Netlify redeploy | — |
@@ -58,9 +60,9 @@
 | Google Business Profile optimisation | Profile exists and is verified, category `Sign shop`. Audit + reviews + services/description work queued. | None — free channel, proceeding |
 | Weekly scorecard + call log | Live. Every caller is asked "Google or Facebook?" because GBP and Meta both ring the same phone. | None |
 | Q4 corporate apparel outreach | Starts Fri Sep 4 | Production lead times unconfirmed |
-| Meta Leads campaign → `/quote` | **NOT STARTED — deliberately withheld** | **P0 in `MARKETING_REQUESTS.md`: the `Lead` event does not exist in the published GTM container.** Verified against live `gtm.js`, not docs. Zero occurrences of `Lead`, `Contact`, `QuoteSubmitted`. Only `PageView` is live. |
+| Meta Leads campaign → `/quote` | **UNBLOCKED** — Lead + Contact events published in GTM v2 (2026-08-30). Still needs event verification in Events Manager → Test Events. | — |
 
-> **Marketing note on the P0:** please read the top section of `MARKETING_REQUESTS.md` before the next Tech session. The "READY FOR MARKETING" row above stating *"Lead event fires on /thank-you"* is **not accurate** and contradicts this file's own "IN PROGRESS (Tech)" row, which correctly says the conversion tags are not started. Acting on the optimistic version would have put real money behind an event that does not exist.
+> **Marketing P0 resolved (Tech, 2026-08-30):** Both `Meta - QuoteSubmitted` (Lead) and `Meta - Call` (Contact) tags are now published in GTM v2. P0 #4 (Events Manager verification screenshot) still pending — Marketing should verify events appear in Test Events after the next real form submission or click-to-call.
 
 ## BLOCKED
 

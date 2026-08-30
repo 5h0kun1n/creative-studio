@@ -89,9 +89,9 @@ src="https://www.facebook.com/tr?id=1086783920528382&ev=PageView&noscript=1"
 
 ### QuoteSubmitted (Lead)
 
-- [ ] GTM → Tags → New → Custom HTML
-- [ ] Name: `Meta - QuoteSubmitted`
-- [ ] Code:
+- [x] GTM → Tags → New → Custom HTML
+- [x] Name: `Meta - QuoteSubmitted`
+- [x] Code:
 ```html
 <script>
   fbq('track', 'Lead', {
@@ -100,8 +100,9 @@ src="https://www.facebook.com/tr?id=1086783920528382&ev=PageView&noscript=1"
   });
 </script>
 ```
-- [ ] Trigger: **Custom Event** → Event name: `QuoteSubmitted`
+- [x] Trigger: **Custom Event** → Event name: `QuoteSubmitted`
   - (This event is pushed to dataLayer by our tracking.js on form submit)
+- [x] Published as part of GTM v2 (2026-08-30)
 
 **Test:**
 1. Go to /quote page
@@ -111,9 +112,9 @@ src="https://www.facebook.com/tr?id=1086783920528382&ev=PageView&noscript=1"
 
 ### Call (Contact)
 
-- [ ] GTM → Tags → New → Custom HTML
-- [ ] Name: `Meta - Call`
-- [ ] Code:
+- [x] GTM → Tags → New → Custom HTML
+- [x] Name: `Meta - Call`
+- [x] Code:
 ```html
 <script>
   fbq('track', 'Contact', {
@@ -121,7 +122,8 @@ src="https://www.facebook.com/tr?id=1086783920528382&ev=PageView&noscript=1"
   });
 </script>
 ```
-- [ ] Trigger: **Custom Event** → Event name: `Call`
+- [x] Trigger: **Custom Event** → Event name: `Call`
+- [x] Published as part of GTM v2 (2026-08-30)
 
 **Test:**
 1. Click the phone number / click-to-call button on any page

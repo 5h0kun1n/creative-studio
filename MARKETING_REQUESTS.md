@@ -50,8 +50,8 @@ Note this does **not** mean leads are being lost. Netlify Forms + Resend still c
 
 | # | Request | Why | Status |
 |---|---|---|---|
-| 1 | Build + publish `Meta - QuoteSubmitted` → `Lead`, triggered on dataLayer event `QuoteSubmitted` | Unblocks every conversion-objective campaign. Highest-value single task in the stack. | PENDING |
-| 2 | Build + publish `Meta - Call` → `Contact`, triggered on dataLayer event `Call` | We are running a Calls campaign. Right now we cannot measure a single tap. | PENDING |
+| 1 | Build + publish `Meta - QuoteSubmitted` → `Lead`, triggered on dataLayer event `QuoteSubmitted` | Unblocks every conversion-objective campaign. Highest-value single task in the stack. | **DONE (Tech, 2026-08-30)** — published in GTM v2 |
+| 2 | Build + publish `Meta - Call` → `Contact`, triggered on dataLayer event `Call` | We are running a Calls campaign. Right now we cannot measure a single tap. | **DONE (Tech, 2026-08-30)** — published in GTM v2 |
 | 3 | Add `tracking.js` to the **homepage** | Verified: `tracking.js` loads on `/quote` and `/thank-you` but **not** on `https://creativstudio.co`. If the phone number is in the homepage header, `Call` can never fire there even after tag #2 ships. | DONE (Tech, 2026-08-30) — added to `deploy/index.html`, needs Netlify redeploy |
 | 4 | Send Marketing a screenshot of Events Manager → Test Events showing `Lead` after a real test submission | "Tag published" and "event arriving" are different claims. Only the second one lets us spend. | PENDING |
 | 5 | `CompanyStoreStart` → `Lead` with `content_name: company_store` | Needed before any company-store campaign. Not urgent — no spend planned yet. | PENDING |
@@ -111,8 +111,8 @@ All of "Add GTM snippet to `<head>`" is unchecked, but GTM-PV35GJLJ is verifiabl
 
 | Date | Event / Tag | Platform | Purpose | Status |
 |------|------------|----------|---------|--------|
-| 2026-08-30 | `QuoteSubmitted` → `Lead` | GTM → Meta | Unblock conversion campaigns | PENDING (P0 #1) |
-| 2026-08-30 | `Call` → `Contact` | GTM → Meta | Measure the live Calls campaign | PENDING (P0 #2) |
+| 2026-08-30 | `QuoteSubmitted` → `Lead` | GTM → Meta | Unblock conversion campaigns | **DONE (Tech, 2026-08-30)** — GTM v2 |
+| 2026-08-30 | `Call` → `Contact` | GTM → Meta | Measure the live Calls campaign | **DONE (Tech, 2026-08-30)** — GTM v2 |
 | 2026-08-30 | `tracking.js` on homepage | Site | Enable `Call` on the page most likely to hold the phone number | DONE (Tech, 2026-08-30) — needs Netlify redeploy |
 | 2026-08-30 | `CompanyStoreStart` → `Lead` | GTM → Meta | Future company-store campaign | PENDING (low) |
 
