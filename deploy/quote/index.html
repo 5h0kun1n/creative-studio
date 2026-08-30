@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Free Quote | Creative Studio — Charlotte, NC</title>
+  <meta name="description" content="Request a free quote for custom signs, vehicle wraps, vinyl lettering, 3D lettering, and more from Creative Studio in Charlotte, NC.">
+  <link rel="canonical" href="https://creativstudio.co/quote">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="/js/tracking.js" data-gtm="GTM-PV35GJLJ"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0D0D0D;
+      --card: #141414;
+      --border: #1f1f1f;
+      --border-form: #2a2a2a;
+      --lime: #A3E635;
+      --lime-hover: #BEF264;
+      --text: #F5F5F5;
+      --muted: #9CA3AF;
+      --radius: 12px;
+      --max-w: 720px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ---- Header ---- */
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .header .logo {
+      font-weight: 900;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .header .logo span { color: var(--lime); }
+    .header-phone {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .header-phone:hover { color: var(--lime); }
+    .header-phone svg { width: 16px; height: 16px; }
+
+    /* ---- Main ---- */
+    .main {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 3rem 1.5rem 4rem;
+    }
+
+    h1 {
+      font-size: clamp(1.75rem, 4vw, 2.5rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+    h1 span { color: var(--lime); }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+      max-width: 560px;
+    }
+
+    /* ---- Form ---- */
+    .form-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 2rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    @media (max-width: 560px) {
+      .form-grid { grid-template-columns: 1fr; }
+    }
+
+    .form-group { display: flex; flex-direction: column; gap: 0.375rem; }
+    .form-group.full { grid-column: 1 / -1; }
+
+    label {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    label .req { color: var(--lime); }
+
+    input, select, textarea {
+      background: var(--bg);
+      border: 1px solid var(--border-form);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      color: var(--text);
+      font-family: inherit;
+      font-size: 0.9375rem;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: var(--lime);
+    }
+    input::placeholder, textarea::placeholder { color: #555; }
+
+    select { cursor: pointer; appearance: none; background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%239CA3AF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 1rem center; padding-right: 2.5rem; }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    .file-upload {
+      position: relative;
+      border: 2px dashed var(--border-form);
+      border-radius: 8px;
+      padding: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .file-upload:hover { border-color: var(--lime); background: rgba(163, 230, 53, 0.03); }
+    .file-upload input[type="file"] { position: absolute; inset: 0; opacity: 0; cursor: pointer; }
+    .file-upload-icon { color: var(--lime); margin-bottom: 0.5rem; }
+    .file-upload-text { font-size: 0.875rem; color: var(--muted); }
+    .file-upload-text strong { color: var(--lime); }
+    .file-names { font-size: 0.8rem; color: var(--lime); margin-top: 0.5rem; word-break: break-all; }
+
+    .submit-btn {
+      grid-column: 1 / -1;
+      margin-top: 0.5rem;
+      background: var(--lime);
+      color: #000;
+      font-family: inherit;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 0.875rem 2rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .submit-btn:hover { background: var(--lime-hover); }
+    .submit-btn:active { transform: scale(0.98); }
+
+    /* ---- Trust bar ---- */
+    .trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      margin-top: 2rem;
+      justify-content: center;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+    .trust-item svg { color: var(--lime); width: 16px; height: 16px; flex-shrink: 0; }
+
+    /* ---- Footer ---- */
+    .footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.8125rem;
+    }
+    .footer a { color: var(--lime); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <a href="https://creativstudio.co" class="logo">Creative<span>.</span>Studio</a>
+    <a href="tel:+17043120219" class="header-phone">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      (704) 312-0219
+    </a>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <h1>Get Your <span>Free Quote</span></h1>
+    <p class="subtitle">Tell us about your project and we'll get back to you fast — usually within a few hours.</p>
+
+    <div class="form-card">
+      <!-- Netlify Forms: the data-netlify="true" attribute makes this work on Netlify with zero backend -->
+      <form name="quote" method="POST" data-netlify="true" action="/thank-you?type=quote" enctype="multipart/form-data" class="quote-form">
+        <input type="hidden" name="form-name" value="quote">
+
+        <!-- Hidden UTM fields (auto-filled by tracking.js) -->
+        <input type="hidden" name="utm_source">
+        <input type="hidden" name="utm_medium">
+        <input type="hidden" name="utm_campaign">
+        <input type="hidden" name="utm_content">
+        <input type="hidden" name="utm_term">
+        <input type="hidden" name="landing_page">
+
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="name">Name <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(704) 555-0000" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span class="req">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@company.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="city">City <span class="req">*</span></label>
+            <input type="text" id="city" name="city" placeholder="Charlotte" value="Charlotte" required>
+          </div>
+
+          <div class="form-group">
+            <label for="service">What do you need? <span class="req">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service</option>
+              <option value="vehicle_wraps">Vehicle Wraps</option>
+              <option value="custom_signs">Custom Signs</option>
+              <option value="vinyl_lettering">Vinyl Lettering / Decals</option>
+              <option value="3d_lettering">3D Lettering</option>
+              <option value="storefront_window">Storefront / Window Graphics</option>
+              <option value="banners">Banners & Displays</option>
+              <option value="fleet_branding">Fleet Branding</option>
+              <option value="promo_products">Promotional Products</option>
+              <option value="company_store">Company Store Setup</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="timeline">Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="" disabled selected>When do you need it?</option>
+              <option value="asap">ASAP / Rush</option>
+              <option value="1_week">Within 1 week</option>
+              <option value="2_weeks">Within 2 weeks</option>
+              <option value="1_month">Within a month</option>
+              <option value="exploring">No rush / just exploring</option>
+            </select>
+          </div>
+
+          <div class="form-group full">
+            <label>Upload Photos or Files</label>
+            <div class="file-upload" id="file-drop">
+              <div class="file-upload-icon">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
+              </div>
+              <div class="file-upload-text"><strong>Click to upload</strong> or drag & drop<br>Images, PDFs, AI files — up to 10 MB each</div>
+              <input type="file" name="photos" id="photos" multiple accept="image/*,.pdf,.ai,.eps,.svg">
+              <div class="file-names" id="file-names"></div>
+            </div>
+          </div>
+
+          <div class="form-group full">
+            <label for="message">Tell us more about your project</label>
+            <textarea id="message" name="message" placeholder="Dimensions, colors, ideas, anything helps..."></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Get My Free Quote</button>
+
+        </div>
+      </form>
+    </div>
+
+    <!-- Trust signals -->
+    <div class="trust">
+      <div class="trust-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        Free quotes, no obligation
+      </div>
+      <div class="trust-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        Fast turnaround
+      </div>
+      <div class="trust-item">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+        Charlotte, NC &amp; surrounding areas
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2026 Creative Studio &middot; 658 Griffith Rd, Ste 119, Charlotte, NC 28217</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="https://creativstudio.co">Home</a> &middot;
+      <a href="https://shop.creativstudio.co">Shop</a> &middot;
+      <a href="tel:+17043120219">(704) 312-0219</a>
+    </p>
+  </footer>
+
+  <!-- File upload preview -->
+  <script>
+    var fileInput = document.getElementById('photos');
+    var fileNames = document.getElementById('file-names');
+    if (fileInput) {
+      fileInput.addEventListener('change', function () {
+        var names = Array.from(this.files).map(function (f) { return f.name; });
+        fileNames.textContent = names.length ? names.join(', ') : '';
+      });
+    }
+  </script>
+
+</body>
+</html>

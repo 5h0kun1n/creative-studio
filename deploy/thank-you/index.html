@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thanks! We Got Your Request | Creative Studio</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <script src="/js/tracking.js" data-gtm="GTM-PV35GJLJ"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #0D0D0D;
+      --card: #141414;
+      --border: #1f1f1f;
+      --lime: #A3E635;
+      --lime-hover: #BEF264;
+      --text: #F5F5F5;
+      --muted: #9CA3AF;
+      --radius: 12px;
+    }
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .header .logo { font-weight: 900; font-size: 1.25rem; color: var(--text); text-decoration: none; letter-spacing: -0.02em; }
+    .header .logo span { color: var(--lime); }
+    .header-phone { display: flex; align-items: center; gap: 0.5rem; color: var(--muted); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: color 0.2s; }
+    .header-phone:hover { color: var(--lime); }
+    .header-phone svg { width: 16px; height: 16px; }
+
+    .hero {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+    }
+    .hero-inner {
+      text-align: center;
+      max-width: 560px;
+    }
+    .check-circle {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: rgba(163, 230, 53, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+    }
+    .check-circle svg { color: var(--lime); width: 40px; height: 40px; }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 1rem; }
+    h1 span { color: var(--lime); }
+    .message { color: var(--muted); font-size: 1.05rem; margin-bottom: 2rem; }
+    .next-steps { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem 2rem; text-align: left; margin-bottom: 2rem; }
+    .next-steps h2 { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--lime); margin-bottom: 1rem; }
+    .next-steps ol { padding-left: 1.25rem; color: var(--muted); }
+    .next-steps li { margin-bottom: 0.5rem; font-size: 0.9375rem; }
+    .next-steps li strong { color: var(--text); }
+    .cta-row { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 8px; font-family: inherit; font-size: 0.9375rem; font-weight: 600; text-decoration: none; transition: background 0.2s, transform 0.1s; }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary { background: var(--lime); color: #000; }
+    .btn-primary:hover { background: var(--lime-hover); }
+    .btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+    .btn-secondary:hover { border-color: var(--lime); color: var(--lime); }
+
+    .footer { text-align: center; padding: 2rem 1.5rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.8125rem; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <a href="https://creativstudio.co" class="logo">Creative<span>.</span>Studio</a>
+    <a href="tel:+17043120219" class="header-phone">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+      (704) 312-0219
+    </a>
+  </header>
+
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="check-circle">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+      </div>
+
+      <h1>We got your <span>request!</span></h1>
+      <p class="message">Our team will review your project details and get back to you — usually within a few hours during business hours.</p>
+
+      <div class="next-steps">
+        <h2>What happens next</h2>
+        <ol>
+          <li><strong>We review your details</strong> and put together options</li>
+          <li><strong>You'll get a call or email</strong> with your quote</li>
+          <li><strong>Approve &amp; we start</strong> — most projects ship in days</li>
+        </ol>
+      </div>
+
+      <div class="cta-row">
+        <a href="tel:+17043120219" class="btn btn-primary">
+          <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          Need it faster? Call us
+        </a>
+        <a href="https://shop.creativstudio.co" class="btn btn-secondary">Browse the Shop</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2026 Creative Studio &middot; 658 Griffith Rd, Ste 119, Charlotte, NC 28217</p>
+  </footer>
+
+  <!-- Fire conversion events based on the ?type= parameter -->
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var type = params.get('type');
+
+      switch (type) {
+        case 'quote':
+          window.csTrack('QuoteSubmitted', { formType: 'quote', page: 'thank_you' });
+          break;
+        case 'company_store':
+          window.csTrack('CompanyStoreStart', { page: 'thank_you' });
+          break;
+        default:
+          window.csTrack('QuoteSubmitted', { formType: 'general', page: 'thank_you' });
+      }
+    })();
+  </script>
+
+</body>
+</html>

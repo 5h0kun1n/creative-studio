@@ -1,0 +1,140 @@
+/* Creative Studio — Custom Styles */
+
+:root {
+  --bg-dark: #0D0D0D;
+  --brand-gray: #4A4A4A;
+  --accent-lime: #A3E635;
+  --text-primary: #F5F5F5;
+  --text-muted: #9CA3AF;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+}
+
+/* Accent glow for CTAs */
+.btn-accent {
+  background-color: var(--accent-lime);
+  color: #0D0D0D;
+  transition: all 0.25s ease;
+}
+
+.btn-accent:hover {
+  background-color: #BEF264;
+  box-shadow: 0 0 24px rgba(163, 230, 53, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border: 2px solid var(--accent-lime);
+  color: var(--accent-lime);
+  transition: all 0.25s ease;
+}
+
+.btn-outline:hover {
+  background-color: var(--accent-lime);
+  color: #0D0D0D;
+}
+
+/* Image placeholder grid */
+.image-placeholder {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a1a1a 100%);
+  border: 1px dashed var(--brand-gray);
+  position: relative;
+  overflow: hidden;
+}
+
+.image-placeholder::after {
+  content: attr(data-label);
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-gray);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Service card hover */
+.service-card {
+  transition: all 0.3s ease;
+  border: 1px solid #1f1f1f;
+}
+
+.service-card:hover {
+  border-color: var(--accent-lime);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(163, 230, 53, 0.08);
+}
+
+/* Nav dropdown */
+.nav-dropdown {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+}
+
+.nav-item:hover .nav-dropdown,
+.nav-item:focus-within .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Form styling */
+.form-input {
+  background-color: #141414;
+  border: 1px solid #2a2a2a;
+  color: var(--text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent-lime);
+  box-shadow: 0 0 0 3px rgba(163, 230, 53, 0.15);
+}
+
+.form-input::placeholder {
+  color: var(--brand-gray);
+}
+
+/* Hero gradient overlay */
+.hero-gradient {
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(163, 230, 53, 0.06) 0%, transparent 60%);
+}
+
+/* Section divider accent line */
+.accent-line {
+  width: 48px;
+  height: 3px;
+  background-color: var(--accent-lime);
+}
+
+/* Mobile menu */
+.mobile-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
+}
+
+.mobile-menu.open {
+  max-height: 600px;
+}
+
+/* Stat counter styling */
+.stat-number {
+  color: var(--accent-lime);
+  font-variant-numeric: tabular-nums;
+}

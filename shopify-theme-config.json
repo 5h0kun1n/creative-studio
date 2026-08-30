@@ -1,0 +1,214 @@
+{
+  "_meta": {
+    "description": "Shopify Dawn theme settings mapped to Creative Studio brand identity",
+    "source": "https://creativstudio.co/css/styles.css",
+    "font_source": "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900",
+    "last_updated": "2026-08-08"
+  },
+
+  "brand_tokens": {
+    "colors": {
+      "bg_dark": "#0D0D0D",
+      "brand_gray": "#4A4A4A",
+      "accent_lime": "#A3E635",
+      "accent_lime_hover": "#BEF264",
+      "text_primary": "#F5F5F5",
+      "text_muted": "#9CA3AF",
+      "card_bg": "#141414",
+      "border_subtle": "#1f1f1f",
+      "border_form": "#2a2a2a",
+      "black_pure": "#000000"
+    },
+    "fonts": {
+      "heading": "Inter",
+      "body": "Inter",
+      "fallback": "system-ui, -apple-system, sans-serif",
+      "heading_weight": "900",
+      "body_weight": "400"
+    },
+    "spacing": {
+      "max_width": "1280px",
+      "section_padding": "96px",
+      "card_padding": "32px",
+      "card_radius": "12px"
+    }
+  },
+
+  "dawn_settings": {
+    "colors_solid_button_labels": "#0D0D0D",
+    "colors_accent_1": "#A3E635",
+    "colors_accent_2": "#BEF264",
+    "colors_background_1": "#0D0D0D",
+    "colors_background_2": "#141414",
+    "colors_text": "#F5F5F5",
+    "colors_outline_button_labels": "#A3E635",
+    "colors_secondary_button_labels": "#A3E635",
+
+    "type_header_font": "inter_n9",
+    "type_header_font_size": 36,
+    "heading_uppercase": true,
+    "type_body_font": "inter_n4",
+    "type_body_font_size": 100,
+    "type_body_line_height": 1.6,
+
+    "page_width": 1280,
+    "spacing_sections": 60,
+    "spacing_grid_horizontal": 24,
+    "spacing_grid_vertical": 24,
+
+    "buttons_border_thickness": 2,
+    "buttons_radius": 4,
+    "buttons_border_opacity": 100,
+
+    "inputs_border_thickness": 1,
+    "inputs_radius": 4,
+    "inputs_border_opacity": 30,
+
+    "card_style": "standard",
+    "card_border_thickness": 1,
+    "card_border_opacity": 20,
+    "card_corner_radius": 12,
+    "card_shadow_opacity": 0,
+    "card_color_scheme": "background-2",
+
+    "badge_position": "bottom left",
+    "sale_badge_color_scheme": "accent-1",
+    "sold_out_badge_color_scheme": "background-2",
+
+    "social_twitter_link": "",
+    "social_facebook_link": "",
+    "social_instagram_link": "",
+
+    "favicon": "assets/logo.png",
+    "logo_width": 120
+  },
+
+  "dawn_sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "color_scheme": "background-1",
+        "logo_position": "top-left",
+        "menu": "main-menu",
+        "show_line_separator": true,
+        "sticky_header_type": "on-scroll-up",
+        "enable_country_selector": false,
+        "enable_language_selector": false
+      }
+    },
+    "announcement_bar": {
+      "type": "announcement-bar",
+      "settings": {
+        "color_scheme": "accent-1",
+        "text": "FREE SHIPPING on orders over $150 | Same-week turnaround on most print products",
+        "link": ""
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "color_scheme": "background-1",
+        "show_email_signup": true,
+        "email_heading": "Stay in the loop",
+        "show_social": false,
+        "show_payment": true
+      }
+    }
+  },
+
+  "collections_structure": [
+    {
+      "handle": "business-cards",
+      "title": "Business Cards",
+      "description": "Premium business cards — matte, gloss, soft-touch, and specialty stocks. Trade quality, every run.",
+      "supplier": "4over"
+    },
+    {
+      "handle": "flyers-brochures",
+      "title": "Flyers & Brochures",
+      "description": "Full-color flyers, tri-fold brochures, and marketing collateral on premium paper stocks.",
+      "supplier": "4over"
+    },
+    {
+      "handle": "banners-signs",
+      "title": "Banners & Signs",
+      "description": "Vinyl banners, retractable stands, foam board, and rigid signage for indoor and outdoor use.",
+      "supplier": "4over"
+    },
+    {
+      "handle": "yard-signs",
+      "title": "Yard Signs",
+      "description": "Coroplast yard signs with optional H-stakes. Single or double-sided, full color.",
+      "supplier": "4over"
+    },
+    {
+      "handle": "promotional-items",
+      "title": "Promotional Items",
+      "description": "Branded pens, mugs, drinkware, bags, tech accessories, and corporate giveaways.",
+      "supplier": "hit_promotional"
+    },
+    {
+      "handle": "apparel",
+      "title": "Apparel",
+      "description": "Custom-decorated t-shirts, polos, caps, hoodies, and workwear with your logo.",
+      "supplier": "hit_promotional"
+    }
+  ],
+
+  "navigation": {
+    "main_menu": [
+      { "title": "Shop All", "url": "/collections/all" },
+      { "title": "Print Products", "url": "#", "children": [
+        { "title": "Business Cards", "url": "/collections/business-cards" },
+        { "title": "Flyers & Brochures", "url": "/collections/flyers-brochures" },
+        { "title": "Banners & Signs", "url": "/collections/banners-signs" },
+        { "title": "Yard Signs", "url": "/collections/yard-signs" }
+      ]},
+      { "title": "Promo & Apparel", "url": "#", "children": [
+        { "title": "Promotional Items", "url": "/collections/promotional-items" },
+        { "title": "Apparel", "url": "/collections/apparel" }
+      ]},
+      { "title": "About", "url": "/pages/about" },
+      { "title": "Contact", "url": "/pages/contact" }
+    ],
+    "footer_menu": [
+      { "title": "Shop All", "url": "/collections/all" },
+      { "title": "About", "url": "/pages/about" },
+      { "title": "Shipping & Turnaround", "url": "/pages/shipping" },
+      { "title": "FAQ", "url": "/pages/faq" },
+      { "title": "Contact", "url": "/pages/contact" },
+      { "title": "Main Site", "url": "https://creativstudio.co" }
+    ]
+  },
+
+  "pages": [
+    {
+      "handle": "about",
+      "title": "About Creative Studio",
+      "content_summary": "15+ years in commercial signage and printing. Charlotte-based production partner for businesses that need to be seen."
+    },
+    {
+      "handle": "contact",
+      "title": "Contact Us",
+      "content_summary": "658 Griffith Rd, Ste 119, Charlotte, NC 28217 | 704-312-0219 | info@creativstudio.co"
+    },
+    {
+      "handle": "shipping",
+      "title": "Shipping & Turnaround",
+      "content_summary": "Production times, shipping methods, and delivery expectations for print and promo products."
+    },
+    {
+      "handle": "faq",
+      "title": "Frequently Asked Questions",
+      "content_summary": "Common questions about ordering, file requirements, proofing, bulk pricing, and returns."
+    }
+  ],
+
+  "dns_setup": {
+    "type": "CNAME",
+    "host": "shop",
+    "value": "shops.myshopify.com",
+    "ttl": 3600,
+    "result": "shop.creativstudio.co → Shopify store"
+  }
+}

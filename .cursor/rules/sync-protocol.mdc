@@ -1,0 +1,33 @@
+---
+description: Sync protocol for Tech ↔ Marketing communication via shared files
+alwaysApply: true
+---
+
+# Cross-Chat Sync Protocol
+
+This workspace is shared between a **Tech chat** and a **Marketing chat**.
+Three files form the communication bridge:
+
+| File | Writer | Reader |
+|------|--------|--------|
+| `TECH_HANDOFF.md` | Tech | Marketing |
+| `MARKETING_REQUESTS.md` | Marketing | Tech |
+| `STATUS.md` | Both (own sections) | Both |
+
+## At session start
+
+1. Read `STATUS.md` to understand current state
+2. Read the file written by the *other* chat for new input
+3. After completing work, update your own files and `STATUS.md`
+
+## Tech chat duties
+
+- Read `MARKETING_REQUESTS.md` for new requests
+- Build/ship, then update `TECH_HANDOFF.md` with new URLs/events/fields
+- Update "LIVE", "IN PROGRESS (Tech)", and "BLOCKED" sections in `STATUS.md`
+
+## Marketing chat duties
+
+- Read `TECH_HANDOFF.md` for available URLs, events, UTM format
+- Write campaign needs in `MARKETING_REQUESTS.md`
+- Update "IN PROGRESS (Marketing)" section in `STATUS.md`

@@ -1,0 +1,15 @@
+{
+  "name": "creative-studio-tools",
+  "version": "1.0.0",
+  "description": "Lead generation scraper and local server for Creative Studio",
+  "scripts": {
+    "scrape": "node scraper.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "puppeteer": "^24.9.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative Studio | Business Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="logo-icon">CS</span>
+                <span class="logo-text">Creative Studio</span>
+            </div>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#" class="nav-item active" data-tab="overview">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                <span>Overview</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="crm">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                <span>CRM / Leads</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="pricing">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                <span>Pricing Calculator</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="leads">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                <span>Lead Generation</span>
+            </a>
+            <a href="#" class="nav-item" data-tab="social">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                <span>Social Calendar</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <a href="index.html" class="nav-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                <span>View Website</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Mobile Header -->
+    <header class="mobile-header">
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <span></span><span></span><span></span>
+        </button>
+        <span class="mobile-title">Creative Studio</span>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- ==================== OVERVIEW TAB ==================== -->
+        <div class="tab-content active" id="tab-overview">
+            <div class="page-header">
+                <div>
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's your business at a glance.</p>
+                </div>
+                <div class="header-actions">
+                    <span class="date-display" id="currentDate"></span>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Total Leads</span>
+                        <span class="stat-value" id="statLeads">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Active Quotes</span>
+                        <span class="stat-value" id="statQuotes">0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Revenue (Month)</span>
+                        <span class="stat-value" id="statRevenue">$0</span>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div class="stat-info">
+                        <span class="stat-label">Jobs Won</span>
+                        <span class="stat-value" id="statWon">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Recent Leads</h3>
+                        <button class="btn btn-sm btn-outline" onclick="switchTab('crm')">View All</button>
+                    </div>
+                    <div class="card-body" id="recentLeads">
+                        <div class="empty-state">
+                            <p>No leads yet. They'll appear here as they come in from your website or when you add them manually in the CRM.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <h3>Upcoming Follow-Ups</h3>
+                        <button class="btn btn-sm btn-outline" onclick="switchTab('crm')">View All</button>
+                    </div>
+                    <div class="card-body" id="upcomingFollowups">
+                        <div class="empty-state">
+                            <p>No follow-ups scheduled. Set follow-up dates when you add leads in the CRM.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="card-body">
+                    <div class="quick-actions">
+                        <button class="quick-action" onclick="switchTab('crm'); setTimeout(() => document.getElementById('addLeadBtn')?.click(), 100);">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+                            Add New Lead
+                        </button>
+                        <button class="quick-action" onclick="switchTab('pricing')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                            Create Quote
+                        </button>
+                        <button class="quick-action" onclick="switchTab('leads')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                            Find New Prospects
+                        </button>
+                        <button class="quick-action" onclick="switchTab('social')">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>
+                            Plan Social Post
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== CRM TAB ==================== -->
+        <div class="tab-content" id="tab-crm">
+            <div class="page-header">
+                <div>
+                    <h1>CRM / Lead Tracker</h1>
+                    <p>Manage your leads, follow-ups, and sales pipeline.</p>
+                </div>
+                <div class="header-actions">
+                    <select id="crmAssigneeFilter" onchange="renderPipeline()">
+                        <option value="all">All Team</option>
+                        <option value="unassigned">Unassigned</option>
+                    </select>
+                    <button class="btn btn-outline" onclick="openTeamModal()">Manage Team</button>
+                    <button class="btn btn-primary" id="addLeadBtn" onclick="openLeadModal()">+ Add Lead</button>
+                </div>
+            </div>
+
+            <!-- Pipeline View -->
+            <div class="pipeline-container">
+                <div class="pipeline-column" data-status="new">
+                    <div class="pipeline-header">
+                        <span class="pipeline-dot new"></span>
+                        <h4>New Leads</h4>
+                        <span class="pipeline-count" id="count-new">0</span>
+                    </div>
+                    <div class="pipeline-cards" id="pipeline-new"></div>
+                </div>
+                <div class="pipeline-column" data-status="contacted">
+                    <div class="pipeline-header">
+                        <span class="pipeline-dot contacted"></span>
+                        <h4>Contacted</h4>
+                        <span class="pipeline-count" id="count-contacted">0</span>
+                    </div>
+                    <div class="pipeline-cards" id="pipeline-contacted"></div>
+                </div>
+                <div class="pipeline-column" data-status="quoted">
+                    <div class="pipeline-header">
+                        <span class="pipeline-dot quoted"></span>
+                        <h4>Quoted</h4>
+                        <span class="pipeline-count" id="count-quoted">0</span>
+                    </div>
+                    <div class="pipeline-cards" id="pipeline-quoted"></div>
+                </div>
+                <div class="pipeline-column" data-status="won">
+                    <div class="pipeline-header">
+                        <span class="pipeline-dot won"></span>
+                        <h4>Won</h4>
+                        <span class="pipeline-count" id="count-won">0</span>
+                    </div>
+                    <div class="pipeline-cards" id="pipeline-won"></div>
+                </div>
+                <div class="pipeline-column" data-status="lost">
+                    <div class="pipeline-header">
+                        <span class="pipeline-dot lost"></span>
+                        <h4>Lost</h4>
+                        <span class="pipeline-count" id="count-lost">0</span>
+                    </div>
+                    <div class="pipeline-cards" id="pipeline-lost"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== PRICING CALCULATOR TAB ==================== -->
+        <div class="tab-content" id="tab-pricing">
+            <div class="page-header">
+                <div>
+                    <h1>Pricing Calculator</h1>
+                    <p>Generate quick quotes for vehicle wraps, signs, and lettering.</p>
+                </div>
+            </div>
+
+            <div class="pricing-layout">
+                <div class="card">
+                    <div class="card-header"><h3>Build Your Quote</h3></div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Service Type</label>
+                            <select id="calcService" onchange="updatePricingForm()">
+                                <option value="">Select service...</option>
+                                <option value="full-wrap">Full Vehicle Wrap</option>
+                                <option value="partial-wrap">Partial Vehicle Wrap</option>
+                                <option value="lettering">Vinyl Lettering</option>
+                                <option value="storefront">Storefront Sign</option>
+                                <option value="banner">Banner</option>
+                                <option value="yard-signs">Yard Signs</option>
+                                <option value="wall-graphics">Wall Graphics / Murals</option>
+                                <option value="window-perf">Window Perforated Film</option>
+                            </select>
+                        </div>
+
+                        <div id="pricingFields"></div>
+
+                        <div class="form-group">
+                            <label>Design Complexity</label>
+                            <select id="calcDesign">
+                                <option value="simple">Simple (text & logo) — Included</option>
+                                <option value="moderate">Moderate (custom layout) — +$150</option>
+                                <option value="complex">Complex (full custom art) — +$350</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Rush Order?</label>
+                            <select id="calcRush">
+                                <option value="standard">Standard (3-5 business days)</option>
+                                <option value="rush">Rush (1-2 business days) — +25%</option>
+                                <option value="sameday">Same Day — +50%</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quantity</label>
+                            <input type="number" id="calcQty" value="1" min="1" max="100">
+                        </div>
+
+                        <button class="btn btn-primary btn-block" onclick="calculatePrice()">Calculate Price</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h3>Quote Summary</h3></div>
+                    <div class="card-body">
+                        <div id="quoteResult" class="quote-result">
+                            <div class="empty-state">
+                                <p>Select a service and options to generate a quote estimate.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-header"><h3>Pricing Reference Guide</h3></div>
+                <div class="card-body">
+                    <div class="pricing-reference">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Service</th>
+                                    <th>Price Range</th>
+                                    <th>Typical Turnaround</th>
+                                    <th>Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>Full Car Wrap</td><td>$2,000 - $3,500</td><td>3-5 days</td><td>Includes design & install</td></tr>
+                                <tr><td>Full Truck/Van Wrap</td><td>$2,800 - $5,000</td><td>3-5 days</td><td>Size dependent</td></tr>
+                                <tr><td>Partial Wrap</td><td>$800 - $2,000</td><td>2-3 days</td><td>Quarter to half coverage</td></tr>
+                                <tr><td>Truck Door Lettering</td><td>$150 - $400/side</td><td>1-2 days</td><td>Cut vinyl text & logo</td></tr>
+                                <tr><td>Storefront Sign (small)</td><td>$500 - $1,500</td><td>3-5 days</td><td>Up to 4x8 ft</td></tr>
+                                <tr><td>Storefront Sign (large)</td><td>$1,500 - $5,000</td><td>5-10 days</td><td>Channel letters, illuminated</td></tr>
+                                <tr><td>Vinyl Banner</td><td>$3 - $6/sq ft</td><td>1-2 days</td><td>13oz or mesh</td></tr>
+                                <tr><td>Yard Signs (18x24)</td><td>$12 - $18 each</td><td>1-2 days</td><td>Coroplast, double-sided</td></tr>
+                                <tr><td>Window Lettering</td><td>$8 - $15/sq ft</td><td>1-2 days</td><td>Cut vinyl or printed</td></tr>
+                                <tr><td>Window Perf Film</td><td>$12 - $20/sq ft</td><td>1-2 days</td><td>See-through from inside</td></tr>
+                                <tr><td>Wall Graphics</td><td>$10 - $25/sq ft</td><td>2-3 days</td><td>Removable or permanent</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== LEAD GENERATION TAB ==================== -->
+        <div class="tab-content" id="tab-leads">
+            <div class="page-header">
+                <div>
+                    <h1>Lead Generation</h1>
+                    <p>Find and track potential customers. Build your outreach list.</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-outline" id="runScraperBtn" onclick="runScraper()">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        Run Scraper
+                    </button>
+                    <button class="btn btn-primary" onclick="openProspectModal()">+ Add Prospect</button>
+                </div>
+            </div>
+
+            <!-- Auto-scraped leads banner -->
+            <div class="card scraper-banner" id="scraperBanner" style="display:none; margin-bottom: 24px;">
+                <div class="card-body" style="display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                        <div style="width:40px;height:40px;border-radius:8px;background:#d1fae5;color:#059669;display:flex;align-items:center;justify-content:center;font-size:1.2rem;">&#9889;</div>
+                        <div>
+                            <strong id="scraperBannerCount">0 new prospects</strong> found by the scraper
+                            <div style="font-size:0.78rem;color:var(--gray-500);" id="scraperBannerTime">Last run: never</div>
+                        </div>
+                    </div>
+                    <div style="display:flex;gap:8px;">
+                        <button class="btn btn-sm btn-primary" onclick="importAllScraped()">Import All to Dashboard</button>
+                        <button class="btn btn-sm btn-outline" onclick="previewScraped()">Preview First</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NC SOS Quick Search + Paste Import -->
+            <div class="card nsos-card" style="margin-bottom: 24px; border-color: #93c5fd; background: #eff6ff;">
+                <div class="card-body" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+                    <div style="width:48px;height:48px;border-radius:10px;background:#2563eb;color:white;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;">&#127963;</div>
+                    <div style="flex:1;min-width:200px;">
+                        <strong style="color:#1e40af;font-size:0.95rem;">NC Secretary of State — New Business Filings</strong>
+                        <p style="font-size:0.82rem;color:#3b82f6;margin-top:4px;">Best source for brand-new businesses that don't have signs yet. Do this every Monday.</p>
+                    </div>
+                    <a href="https://www.sosnc.gov/online_services/search/by_title/search_Business_Registration_changes" target="_blank" class="btn btn-primary" style="background:#2563eb;border-color:#2563eb;">1. Open NC SOS Search</a>
+                </div>
+                <div class="card-body" style="padding-top:0; border-top: 1px solid #bfdbfe;">
+                    <div style="font-size:0.82rem;color:#1e40af;line-height:1.7;margin-bottom:12px;">
+                        <strong>On the NC SOS page:</strong>
+                        Search Type → <strong>"New Businesses"</strong> &nbsp;|&nbsp;
+                        Dates → <strong>last 7 days</strong> &nbsp;|&nbsp;
+                        Check <strong>"Limited Liability Company"</strong> &nbsp;|&nbsp;
+                        County → <strong>"Mecklenburg"</strong> &nbsp;|&nbsp;
+                        Click <strong>Next</strong>
+                    </div>
+                    <div style="font-size:0.82rem;color:#1e40af;margin-bottom:8px;">
+                        <strong>2. Select all results on the NC SOS page (Ctrl+A) and paste below:</strong>
+                    </div>
+                    <textarea id="ncsosPasteBox" rows="4" placeholder="Paste the NC SOS results page here (Ctrl+V)... We'll auto-extract business names and add them as prospects." style="width:100%;border:2px dashed #93c5fd;border-radius:8px;padding:10px;font-size:0.82rem;resize:vertical;background:white;color:#1e3a5f;font-family:inherit;"></textarea>
+                    <div style="display:flex;align-items:center;gap:12px;margin-top:8px;">
+                        <button class="btn btn-primary" style="background:#2563eb;border-color:#2563eb;" onclick="importNCSOSPaste()">Import Businesses</button>
+                        <span id="ncsosImportStatus" style="font-size:0.82rem;color:#16a34a;font-weight:600;"></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prospect Sources -->
+            <div class="lead-gen-grid">
+                <div class="card">
+                    <div class="card-header"><h3>Hot Prospect Categories</h3></div>
+                    <div class="card-body">
+                        <div class="prospect-categories">
+                            <div class="prospect-cat" onclick="filterProspects('contractor')">
+                                <div class="cat-icon">&#128736;</div>
+                                <strong>Contractors</strong>
+                                <span>HVAC, Plumbing, Electrical, Roofing</span>
+                            </div>
+                            <div class="prospect-cat" onclick="filterProspects('realestate')">
+                                <div class="cat-icon">&#127968;</div>
+                                <strong>Real Estate</strong>
+                                <span>Agents, Brokerages, Property Mgmt</span>
+                            </div>
+                            <div class="prospect-cat" onclick="filterProspects('food')">
+                                <div class="cat-icon">&#127828;</div>
+                                <strong>Food & Beverage</strong>
+                                <span>Restaurants, Food Trucks, Catering</span>
+                            </div>
+                            <div class="prospect-cat" onclick="filterProspects('landscaping')">
+                                <div class="cat-icon">&#127793;</div>
+                                <strong>Landscaping</strong>
+                                <span>Lawn Care, Tree Service, Hardscaping</span>
+                            </div>
+                            <div class="prospect-cat" onclick="filterProspects('auto')">
+                                <div class="cat-icon">&#128663;</div>
+                                <strong>Automotive</strong>
+                                <span>Dealerships, Body Shops, Detailing</span>
+                            </div>
+                            <div class="prospect-cat" onclick="filterProspects('retail')">
+                                <div class="cat-icon">&#128717;</div>
+                                <strong>Retail & Services</strong>
+                                <span>New Stores, Salons, Fitness, Medical</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header"><h3>Prospecting Checklist</h3></div>
+                    <div class="card-body">
+                        <div class="checklist" id="prospectChecklist">
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Check NC Secretary of State for new LLCs this week</span>
+                                <a href="https://www.sosnc.gov/online_services/search/by_title/search_Business_Registration_changes" target="_blank" class="checklist-link">Go →</a>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Drive through industrial parks (Arrowood, Nations Ford)</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Check Google Maps for new businesses without signage</span>
+                                <a href="https://www.google.com/maps/search/new+business+charlotte+nc" target="_blank" class="checklist-link">Go →</a>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Visit 3 auto body shops for partnership referrals</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Post in Charlotte business Facebook groups</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Send follow-up emails to all quoted leads</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Drop off business cards at 5 print shops</span>
+                            </label>
+                            <label class="checklist-item">
+                                <input type="checkbox" onchange="saveChecklist()">
+                                <span>Attend a Charlotte Chamber networking event</span>
+                                <a href="https://charlottechamber.com/events/" target="_blank" class="checklist-link">Go →</a>
+                            </label>
+                        </div>
+                        <button class="btn btn-sm btn-outline" style="margin-top: 16px;" onclick="resetChecklist()">Reset Weekly Checklist</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Prospect List -->
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-header">
+                    <h3>Prospect List</h3>
+                    <div class="header-actions">
+                        <select id="prospectFilter" onchange="renderProspects()">
+                            <option value="all">All Categories</option>
+                            <option value="contractor">Contractors</option>
+                            <option value="realestate">Real Estate</option>
+                            <option value="food">Food & Beverage</option>
+                            <option value="landscaping">Landscaping</option>
+                            <option value="auto">Automotive</option>
+                            <option value="retail">Retail & Services</option>
+                        </select>
+                        <select id="prospectStatus" onchange="renderProspects()">
+                            <option value="all">All Status</option>
+                            <option value="not-contacted">Not Contacted</option>
+                            <option value="contacted">Contacted</option>
+                            <option value="interested">Interested</option>
+                            <option value="not-interested">Not Interested</option>
+                        </select>
+                        <select id="prospectAssigneeFilter" onchange="renderProspects()">
+                            <option value="all">All Team</option>
+                            <option value="unassigned">Unassigned</option>
+                        </select>
+                        <button class="btn btn-sm btn-danger" onclick="clearAllProspects()">Clear All</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="prospectList">
+                        <div class="empty-state">
+                            <p>No prospects added yet. Click "+ Add Prospect" to start building your outreach list, or use the categories above to organize your prospecting efforts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SOCIAL CALENDAR TAB ==================== -->
+        <div class="tab-content" id="tab-social">
+            <div class="page-header">
+                <div>
+                    <h1>Social Media Calendar</h1>
+                    <p>Plan and track your social media content. Consistency is key!</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary" onclick="openPostModal()">+ Schedule Post</button>
+                </div>
+            </div>
+
+            <div class="social-layout">
+                <!-- Calendar View -->
+                <div class="card">
+                    <div class="card-header">
+                        <button class="btn btn-sm btn-outline" onclick="changeMonth(-1)">← Prev</button>
+                        <h3 id="calendarMonth"></h3>
+                        <button class="btn btn-sm btn-outline" onclick="changeMonth(1)">Next →</button>
+                    </div>
+                    <div class="card-body">
+                        <div class="calendar" id="socialCalendar"></div>
+                    </div>
+                </div>
+
+                <!-- Content Ideas & Templates -->
+                <div class="card">
+                    <div class="card-header"><h3>Content Ideas</h3></div>
+                    <div class="card-body">
+                        <div class="content-ideas">
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type photo">Photo</span>
+                                <strong>Before & After</strong>
+                                <p>Show a vehicle/sign transformation. These get the most engagement!</p>
+                            </div>
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type video">Video</span>
+                                <strong>Install Time-Lapse</strong>
+                                <p>Record a wrap installation sped up. Mesmerizing content.</p>
+                            </div>
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type photo">Photo</span>
+                                <strong>Customer Spotlight</strong>
+                                <p>Feature a happy customer with their new wrap/sign. Tag their business!</p>
+                            </div>
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type tip">Tip</span>
+                                <strong>Signage Tips</strong>
+                                <p>"5 reasons every contractor needs vehicle lettering" — educational content builds trust.</p>
+                            </div>
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type promo">Promo</span>
+                                <strong>Limited Offer</strong>
+                                <p>"Book this week and get 10% off your vehicle wrap!" Creates urgency.</p>
+                            </div>
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type photo">Photo</span>
+                                <strong>Behind the Scenes</strong>
+                                <p>Show your shop, your tools, your team. People buy from people they know.</p>
+                            </div>
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type tip">Tip</span>
+                                <strong>ROI of Vehicle Wraps</strong>
+                                <p>"A vehicle wrap gets 30,000-70,000 impressions per day" — share the stats!</p>
+                            </div>
+                            <div class="idea-card" onclick="useIdea(this)">
+                                <span class="idea-type photo">Photo</span>
+                                <strong>Project Close-Up</strong>
+                                <p>Detail shots showing quality of material, clean edges, perfect alignment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scheduled Posts -->
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-header">
+                    <h3>Scheduled Posts</h3>
+                    <div class="header-actions">
+                        <select id="postPlatformFilter" onchange="renderPosts()">
+                            <option value="all">All Platforms</option>
+                            <option value="instagram">Instagram</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="google">Google Business</option>
+                            <option value="tiktok">TikTok</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div id="scheduledPosts">
+                        <div class="empty-state">
+                            <p>No posts scheduled. Click "+ Schedule Post" or pick a content idea above to get started. Aim for 3-5 posts per week!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post Templates -->
+            <div class="card" style="margin-top: 24px;">
+                <div class="card-header"><h3>Caption Templates</h3></div>
+                <div class="card-body">
+                    <div class="templates-grid">
+                        <div class="template-card">
+                            <h4>Before & After</h4>
+                            <div class="template-text">Swipe to see the transformation! 🔄
+
+This [vehicle type] went from plain to BRANDED. [Customer name]'s [business type] is now turning heads all over Charlotte.
+
+Ready to make YOUR vehicle work for you? Link in bio for a free quote!
+
+#VehicleWrap #CharlotteNC #SmallBusiness #CarWrap #CLT #CharlotteSmallBusiness #VinylWrap</div>
+                            <button class="btn btn-sm btn-outline" onclick="copyTemplate(this)">Copy</button>
+                        </div>
+                        <div class="template-card">
+                            <h4>Customer Spotlight</h4>
+                            <div class="template-text">Shoutout to [Customer/Business Name]! 🎉
+
+We just finished [service] for their [vehicle/storefront] and the results speak for themselves. Supporting local businesses is what we're all about.
+
+If you know someone who needs signage or wraps, tag them below! 👇
+
+#CharlotteNC #SupportLocal #SignShop #VehicleWrap #CLT #QCBusiness</div>
+                            <button class="btn btn-sm btn-outline" onclick="copyTemplate(this)">Copy</button>
+                        </div>
+                        <div class="template-card">
+                            <h4>Tip / Educational</h4>
+                            <div class="template-text">Did you know? 📊
+
+A single vehicle wrap generates between 30,000 - 70,000 impressions PER DAY. That's the lowest cost-per-impression of ANY advertising medium.
+
+Your van/truck is driving around Charlotte anyway — why not turn it into a 24/7 billboard?
+
+DM us for a free mockup of what YOUR vehicle could look like!
+
+#MarketingTips #VehicleWrap #CharlotteNC #BusinessTips #ROI</div>
+                            <button class="btn btn-sm btn-outline" onclick="copyTemplate(this)">Copy</button>
+                        </div>
+                        <div class="template-card">
+                            <h4>Promotion</h4>
+                            <div class="template-text">⚡ LIMITED TIME OFFER ⚡
+
+Book your vehicle wrap this week and save [X]%! Whether it's a full wrap, partial wrap, or just door lettering — we've got you covered.
+
+✅ Free design included
+✅ Premium 3M vinyl
+✅ Professional installation
+✅ 5-year warranty
+
+DM "WRAP" or call (704) 555-0199 to claim your spot!
+
+#CharlotteNC #Deal #VehicleWrap #SmallBusiness #CLT</div>
+                            <button class="btn btn-sm btn-outline" onclick="copyTemplate(this)">Copy</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ==================== MODALS ==================== -->
+
+    <!-- Lead Modal -->
+    <div class="modal-overlay" id="leadModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="leadModalTitle">Add New Lead</h3>
+                <button class="modal-close" onclick="closeModal('leadModal')">&times;</button>
+            </div>
+            <form id="leadForm" onsubmit="saveLead(event)">
+                <input type="hidden" id="leadId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Contact Name *</label>
+                        <input type="text" id="leadName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Business Name</label>
+                        <input type="text" id="leadBusiness">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone *</label>
+                        <input type="tel" id="leadPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="leadEmail">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Service Needed</label>
+                        <select id="leadService">
+                            <option value="">Select...</option>
+                            <option value="Full Vehicle Wrap">Full Vehicle Wrap</option>
+                            <option value="Partial Wrap">Partial Wrap</option>
+                            <option value="Vinyl Lettering">Vinyl Lettering</option>
+                            <option value="Storefront Sign">Storefront Sign</option>
+                            <option value="Banner">Banners</option>
+                            <option value="Fleet Branding">Fleet Branding</option>
+                            <option value="Yard Signs">Yard Signs</option>
+                            <option value="Design Only">Design Only</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Estimated Value ($)</label>
+                        <input type="number" id="leadValue" placeholder="0">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Assigned To</label>
+                        <select id="leadAssigned">
+                            <option value="">Unassigned</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="leadStatus">
+                            <option value="new">New</option>
+                            <option value="contacted">Contacted</option>
+                            <option value="quoted">Quoted</option>
+                            <option value="won">Won</option>
+                            <option value="lost">Lost</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Source</label>
+                        <select id="leadSource">
+                            <option value="website">Website</option>
+                            <option value="walkin">Walk-In</option>
+                            <option value="referral">Referral</option>
+                            <option value="social">Social Media</option>
+                            <option value="outreach">Cold Outreach</option>
+                            <option value="google">Google Search</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Follow-Up Date</label>
+                        <input type="date" id="leadFollowup">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="leadNotes" rows="3" placeholder="Add any notes about this lead..."></textarea>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Last Call Date</label>
+                        <input type="date" id="leadCallDate">
+                    </div>
+                    <div class="form-group">
+                        <label>Call Notes</label>
+                        <input type="text" id="leadCallNotes" placeholder="e.g., Left voicemail, interested in quote...">
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('leadModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Lead</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Prospect Modal -->
+    <div class="modal-overlay" id="prospectModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add Prospect</h3>
+                <button class="modal-close" onclick="closeModal('prospectModal')">&times;</button>
+            </div>
+            <form id="prospectForm" onsubmit="saveProspect(event)">
+                <input type="hidden" id="prospectId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Business Name *</label>
+                        <input type="text" id="prospectName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Contact Person</label>
+                        <input type="text" id="prospectContact">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="prospectPhone">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input type="email" id="prospectEmail2">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Category</label>
+                        <select id="prospectCategory">
+                            <option value="contractor">Contractor</option>
+                            <option value="realestate">Real Estate</option>
+                            <option value="food">Food & Beverage</option>
+                            <option value="landscaping">Landscaping</option>
+                            <option value="auto">Automotive</option>
+                            <option value="retail">Retail & Services</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="prospectStatusField">
+                            <option value="not-contacted">Not Contacted</option>
+                            <option value="contacted">Contacted</option>
+                            <option value="interested">Interested</option>
+                            <option value="not-interested">Not Interested</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Assigned To</label>
+                        <select id="prospectAssigned">
+                            <option value="">Unassigned</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Call Date</label>
+                        <input type="date" id="prospectCallDate">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Opportunity</label>
+                    <input type="text" id="prospectOpportunity" placeholder="e.g., 3 work vans with no branding">
+                </div>
+                <div class="form-group">
+                    <label>Call Notes</label>
+                    <input type="text" id="prospectCallNotes" placeholder="e.g., Left voicemail, wants callback Thursday...">
+                </div>
+                <div class="form-group">
+                    <label>Notes</label>
+                    <textarea id="prospectNotes" rows="3" placeholder="Where did you find them? What's the opportunity?"></textarea>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('prospectModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Prospect</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Social Post Modal -->
+    <div class="modal-overlay" id="postModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Schedule Post</h3>
+                <button class="modal-close" onclick="closeModal('postModal')">&times;</button>
+            </div>
+            <form id="postForm" onsubmit="savePost(event)">
+                <input type="hidden" id="postId">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Platform *</label>
+                        <select id="postPlatform" required>
+                            <option value="instagram">Instagram</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="google">Google Business</option>
+                            <option value="tiktok">TikTok</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Post Date *</label>
+                        <input type="date" id="postDate" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Content Type</label>
+                    <select id="postType">
+                        <option value="photo">Photo</option>
+                        <option value="video">Video / Reel</option>
+                        <option value="carousel">Carousel</option>
+                        <option value="story">Story</option>
+                        <option value="text">Text Post</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Caption / Content *</label>
+                    <textarea id="postCaption" rows="5" required placeholder="Write your post caption here..."></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Hashtags</label>
+                    <input type="text" id="postHashtags" placeholder="#CharlotteNC #VehicleWrap #SignShop">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select id="postStatus">
+                            <option value="draft">Draft</option>
+                            <option value="scheduled">Scheduled</option>
+                            <option value="posted">Posted</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-actions">
+                    <button type="button" class="btn btn-outline" onclick="closeModal('postModal')">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Team Management Modal -->
+    <div class="modal-overlay" id="teamModal">
+        <div class="modal" style="max-width:440px;">
+            <div class="modal-header">
+                <h3>Manage Sales Team</h3>
+                <button class="modal-close" onclick="closeModal('teamModal')">&times;</button>
+            </div>
+            <div style="padding:24px;">
+                <div style="display:flex;gap:8px;margin-bottom:20px;">
+                    <input type="text" id="newMemberName" placeholder="New team member name..." style="flex:1;padding:10px 14px;font-family:var(--font-primary);font-size:0.88rem;border:1.5px solid var(--gray-300);border-radius:var(--radius-md);background:var(--white);color:var(--gray-800);">
+                    <button class="btn btn-primary" onclick="addTeamMember()">Add</button>
+                </div>
+                <div id="teamMemberList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
