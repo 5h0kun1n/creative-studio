@@ -161,7 +161,11 @@ function renderFooter() {
         </div>
         <div class="mt-12 pt-8 border-t border-[#1f1f1f] flex flex-col sm:flex-row justify-between items-center gap-4">
           <p class="text-[#4A4A4A] text-sm">&copy; ${new Date().getFullYear()} ${SITE.name}. All rights reserved.</p>
-          <p class="text-[#4A4A4A] text-sm">Premium Signs &amp; Commercial Printing</p>
+          <div class="flex items-center gap-4">
+            <a href="/privacy" class="text-[#4A4A4A] hover:text-[#A3E635] transition-colors text-sm">Privacy Policy</a>
+            <span class="text-[#4A4A4A]">·</span>
+            <p class="text-[#4A4A4A] text-sm">Premium Signs &amp; Commercial Printing</p>
+          </div>
         </div>
       </div>
     </footer>
