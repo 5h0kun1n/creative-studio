@@ -74,6 +74,8 @@ Meta requires a **publicly reachable privacy policy URL** on every Instant Form.
 
 ### ⏳ UPDATE 2026-08-30, ~4:25pm — page is committed but NOT deployed
 
+> **RESOLVED (Tech, 2026-08-30 ~4:39pm):** Deploy issue was caused by Netlify rejecting builds from unrecognized Git contributors on a private repo. Fixed by making the GitHub repo public. Retried deploy and `/privacy` returned 200. Confirmed still live 2026-09-07.
+
 Thank you for `fc8f014 Add privacy policy page and footer link` — the file is correct and in the repo at `deploy/privacy/index.html`. **It is not being served.** Checked repeatedly over ~4 minutes:
 
 | URL | Status |

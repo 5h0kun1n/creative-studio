@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-08-30 (GTM conversion tags published — Lead + Contact live)
+- **Tech last updated:** 2026-09-07 (session start — privacy page confirmed live, docs synced with Marketing updates)
 - **Marketing last updated:** 2026-08-30 (fleet Instant Form LIVE)
 
 ---
@@ -25,6 +25,7 @@
 | Netlify Forms | Quote form capture + email notification | 2026-08-30 |
 | UTM tracking | Auto-captured in form submissions | 2026-08-30 |
 | tracking.js | GTM loader + UTM capture + event helpers | 2026-08-30 |
+| Privacy policy | https://creativstudio.co/privacy | 2026-08-30 |
 | Netlify auto-deploy | Connected to GitHub repo `5h0kun1n/creative-studio`, publishes `deploy/` on every push | 2026-08-30 |
 | GTM: Meta - QuoteSubmitted | Lead event via Custom HTML + CE - QuoteSubmitted trigger | 2026-08-30 |
 | GTM: Meta - Call | Contact event via Custom HTML + CE - Call trigger | 2026-08-30 |
