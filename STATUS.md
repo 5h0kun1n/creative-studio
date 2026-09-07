@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-09-07 (session start — privacy page confirmed live, docs synced with Marketing updates)
+- **Tech last updated:** 2026-09-07 (added Pipeboard Meta Ads MCP setup instructions to TECH_HANDOFF.md for Marketing)
 - **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
