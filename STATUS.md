@@ -8,7 +8,7 @@
 
 ## Last sync
 - **Tech last updated:** 2026-09-07 (session start — privacy page confirmed live, docs synced with Marketing updates)
-- **Marketing last updated:** 2026-08-30 (fleet Instant Form LIVE)
+- **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
 
@@ -56,11 +56,10 @@
 
 | Item | Status | Blocker |
 |------|--------|---------|
-| `CS-META-FLEET-FORM-V01` — Instant Form, $25/day, Charlotte +25mi, "Don't drive blank" | **LIVE 2026-08-30.** Higher-intent form. Leads in Meta Business Suite (Google Sheets connect failed). | None — do not edit mid-flight |
-| V00b Calls campaign | Abandoned as draft. Never published. | — |
-| Google Business Profile optimisation | Profile exists and is verified, category `Sign shop`. Audit + reviews queued. | None |
-| Q4 corporate apparel outreach | Starts Fri Sep 4 | Production lead times unconfirmed |
-| Meta website campaign → `/quote` | Held. Site Lead event is live, but this week's spend is Instant Forms only. | None |
+| `CS-META-FLEET-FORM-V01` image | **PAUSED.** $54 spend, 1 lead, $1,600 quote — customer went dark on price. | — |
+| `CS-META-FLEET-FORM-V02` 40s video | **PAUSED 2026-09-07.** ~6 Instant Form leads, ~$19 CPL. 2 answered the phone, 0 came back. Hook 31%, avg watch 4s. | Recut to 12–15s before relaunch |
+| Next paid | Short video, same Instant Form, $25/day. Not sending traffic to `/quote` yet. | Waiting on new video file |
+| Google Business Profile | Verified, category Sign shop. Audit still queued. | None |
 
 > **Marketing P0 fully resolved (Tech, 2026-08-30):** All conversion tags published in GTM v2 and `Lead` event verified in Events Manager → Test Events (Processed at 3:31 PM). Marketing is clear to build conversion-objective campaigns.
 
