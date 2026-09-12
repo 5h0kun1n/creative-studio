@@ -6,6 +6,12 @@
   <title>Get a Free Quote | Creative Studio — Charlotte, NC</title>
   <meta name="description" content="Request a free quote for custom signs, vehicle wraps, vinyl lettering, 3D lettering, and more from Creative Studio in Charlotte, NC.">
   <link rel="canonical" href="https://creativstudio.co/quote">
+  <link rel="icon" href="/assets/logo.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Get a Free Quote | Creative Studio — Charlotte, NC">
+  <meta property="og:description" content="Request a free quote for custom signs, vehicle wraps, vinyl lettering, 3D lettering, and more from Creative Studio in Charlotte, NC.">
+  <meta property="og:url" content="https://creativstudio.co/quote">
+  <meta property="og:image" content="https://creativstudio.co/assets/images/featured-hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -343,6 +349,12 @@
         var names = Array.from(this.files).map(function (f) { return f.name; });
         fileNames.textContent = names.length ? names.join(', ') : '';
       });
+    }
+    var serviceSelect = document.getElementById('service');
+    var requested = new URLSearchParams(window.location.search).get('service');
+    if (serviceSelect && requested) {
+      var option = Array.from(serviceSelect.options).find(function (o) { return o.value === requested; });
+      if (option) serviceSelect.value = requested;
     }
   </script>
 

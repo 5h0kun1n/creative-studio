@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /thank-you
+Disallow: /thank-you/
+
+Sitemap: https://creativstudio.co/sitemap.xml

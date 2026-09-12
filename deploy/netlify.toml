@@ -1,2 +1,42 @@
 [functions]
   directory = "netlify/functions"
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact/"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/about/"
+  status = 301
+
+[[redirects]]
+  from = "/services/signage-3d-letters.html"
+  to = "/services/signage-3d-letters/"
+  status = 301
+
+[[redirects]]
+  from = "/services/vehicle-graphics.html"
+  to = "/services/vehicle-graphics/"
+  status = 301
+
+[[redirects]]
+  from = "/services/commercial-printing.html"
+  to = "/services/commercial-printing/"
+  status = 301
+
+[[redirects]]
+  from = "/services/promo-apparel.html"
+  to = "/services/promo-apparel/"
+  status = 301

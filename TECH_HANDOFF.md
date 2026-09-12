@@ -13,6 +13,16 @@
 | Main site           | https://creativstudio.co                      | Live       |
 | Quote form          | https://creativstudio.co/quote                | Live (verified 2026-08-30) |
 | Thank-you page      | https://creativstudio.co/thank-you            | Live (verified 2026-08-30) |
+| Privacy             | https://creativstudio.co/privacy              | Live       |
+| Services index      | https://creativstudio.co/services/            | Live 2026-09-12 |
+| Vehicle wraps       | https://creativstudio.co/services/vehicle-graphics/ | Live 2026-09-12 |
+| Signs & 3D letters  | https://creativstudio.co/services/signage-3d-letters/ | Live 2026-09-12 |
+| Storefront/windows  | https://creativstudio.co/services/storefront-graphics/ | Live 2026-09-12 |
+| Commercial printing | https://creativstudio.co/services/commercial-printing/ | Live 2026-09-12 |
+| Promo & apparel     | https://creativstudio.co/services/promo-apparel/ | Live 2026-09-12 |
+| About               | https://creativstudio.co/about/               | Live 2026-09-12 |
+| Contact             | https://creativstudio.co/contact/             | Live 2026-09-12 |
+| Sitemap             | https://creativstudio.co/sitemap.xml          | Live 2026-09-12 |
 | Shop                | https://shop.creativstudio.co                 | DNS pending|
 | Shop (temp)         | https://creative-studio-9720.myshopify.com    | Live       |
 
@@ -250,4 +260,12 @@ Free tier available. See Tech for setup when the time comes.
 
 ---
 
-*Last updated: 2026-09-07*
+## SEO notes for Marketing (2026-09-12)
+
+- Homepage title now includes **Charlotte, NC**. All quote CTAs go to `/quote` (old `/contact` 404s are gone).
+- New service pages are valid landing URLs for search and for future website campaigns. Optional quote preselect: `/quote?service=vehicle_wraps` (also `custom_signs`, `3d_lettering`, `storefront_window`, `banners`, `promo_products`).
+- **Owner still needs to:** add the sitemap in [Google Search Console](https://search.google.com/search-console) (`https://creativstudio.co/sitemap.xml`), finish the Google Business Profile audit, and ask customers for Google reviews. That work is not in this repo.
+
+---
+
+*Last updated: 2026-09-12*

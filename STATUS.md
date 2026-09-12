@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-09-07 (added Pipeboard Meta Ads MCP setup instructions to TECH_HANDOFF.md for Marketing)
+- **Tech last updated:** 2026-09-12 (SEO pass: fixed 404s, Charlotte on homepage, service pages, sitemap/schema)
 - **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
@@ -29,12 +29,16 @@
 | Netlify auto-deploy | Connected to GitHub repo `5h0kun1n/creative-studio`, publishes `deploy/` on every push | 2026-08-30 |
 | GTM: Meta - QuoteSubmitted | Lead event via Custom HTML + CE - QuoteSubmitted trigger | 2026-08-30 |
 | GTM: Meta - Call | Contact event via Custom HTML + CE - Call trigger | 2026-08-30 |
+| SEO: robots.txt + sitemap.xml | https://creativstudio.co/sitemap.xml | 2026-09-12 |
+| SEO: service + about + contact pages | /services/*, /about/, /contact/ | 2026-09-12 |
+| SEO: LocalBusiness schema + Charlotte homepage | Homepage title/H1 + JSON-LD | 2026-09-12 |
 
 ## READY FOR MARKETING
 
 | Item | Details |
 |------|---------|
 | Ad landing URL | `https://creativstudio.co/quote?utm_source=meta&utm_medium=paid&utm_campaign={name}` |
+| Service landing URLs | `/services/vehicle-graphics/`, `/services/signage-3d-letters/`, `/services/storefront-graphics/`, `/services/commercial-printing/` |
 | Meta Pixel | Active — PageView fires on all pages. **Lead fires on QuoteSubmitted, Contact fires on Call (published 2026-08-30).** |
 | UTM format | See TECH_HANDOFF.md for full format spec |
 | Form fields | name, phone, email, city, service, timeline, photos, message + hidden UTMs |
@@ -44,6 +48,7 @@
 
 | Item | Status | Blocker |
 |------|--------|---------|
+| Local SEO foundation (pages, sitemap, 404 fixes) | **DONE 2026-09-12** — pushed; wait for Netlify then submit sitemap | Owner: Search Console + GBP |
 | Resend domain verification | Not started | Need to add DNS records for creativstudio.co in Resend |
 | GTM conversion event tags (Lead, Contact) | **LIVE** — published as GTM v2 (2026-08-30) | — |
 | SMS lead notifications | Not started (owner approved) | — |

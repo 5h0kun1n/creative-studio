@@ -16,65 +16,64 @@ const SITE = {
 const SERVICES = [
   {
     title: 'Signage & 3D Letters',
-    href: '/services/signage-3d-letters.html',
+    href: '/services/signage-3d-letters/',
     description: 'Industrial signage, warehouse entrance signs, and dimensional letter systems.',
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>`,
   },
   {
     title: 'Vehicle Graphics',
-    href: '/services/vehicle-graphics.html',
+    href: '/services/vehicle-graphics/',
     description: 'Plotter-cut vinyl lettering, fleet graphics, and heavy-duty truck magnets.',
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h8m-8 4h8m-6 4h4M5 21h14a2 2 0 002-2V7l-4-4H7L3 7v12a2 2 0 002 2z"/></svg>`,
   },
   {
+    title: 'Storefront & Windows',
+    href: '/services/storefront-graphics/',
+    description: 'Window lettering, frosted film, and storefront vinyl for Charlotte businesses.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v14a1 1 0 01-1 1H5a1 1 0 01-1-1V5zm4 0v16m8-16v16M4 9h16M4 15h16"/></svg>`,
+  },
+  {
     title: 'Commercial Printing',
-    href: '/services/commercial-printing.html',
+    href: '/services/commercial-printing/',
     description: 'Trade-quality business cards, flyers, banners, and yard signs.',
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/></svg>`,
   },
   {
     title: 'Promo & Apparel',
-    href: '/services/promo-apparel.html',
+    href: '/services/promo-apparel/',
     description: 'Branded corporate apparel and promotional giveaway products.',
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>`,
   },
 ];
 
-function getBasePath() {
-  const path = window.location.pathname;
-  if (path.includes('/services/')) return '..';
-  return '.';
-}
-
 function renderHeader(activePage) {
-  const base = getBasePath();
   const isServices = activePage === 'services' || window.location.pathname.includes('/services/');
 
   const servicesDropdown = SERVICES.map(
     (s) => `
-      <a href="${base}${s.href.replace(/^\./, '')}" class="block px-4 py-3 text-sm text-gray-300 hover:text-[#A3E635] hover:bg-[#1a1a1a] transition-colors">
+      <a href="${s.href}" class="block px-4 py-3 text-sm text-gray-300 hover:text-[#A3E635] hover:bg-[#1a1a1a] transition-colors">
         ${s.title}
       </a>`
   ).join('');
 
   const mobileServicesLinks = SERVICES.map(
     (s) => `
-      <a href="${base}${s.href.replace(/^\./, '')}" class="block py-2 pl-4 text-sm text-gray-400 hover:text-[#A3E635]">${s.title}</a>`
+      <a href="${s.href}" class="block py-2 pl-4 text-sm text-gray-400 hover:text-[#A3E635]">${s.title}</a>`
   ).join('');
 
   return `
     <header class="fixed top-0 left-0 right-0 z-50 bg-[#0D0D0D]/95 backdrop-blur-md border-b border-[#1f1f1f]">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between h-16 lg:h-20">
-          <a href="${base === '..' ? '../index.html' : 'index.html'}" class="flex items-center shrink-0">
-            <img src="${base}/assets/logo.png" alt="${SITE.name}" class="h-10 lg:h-12 w-auto" />
+          <a href="/" class="flex items-center shrink-0">
+            <img src="/assets/logo.png" alt="${SITE.name} — Charlotte, NC" class="h-10 lg:h-12 w-auto" />
           </a>
 
           <nav class="hidden lg:flex items-center gap-8">
-            <a href="${base}/index.html" class="text-sm font-medium tracking-wide uppercase ${activePage === 'home' ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors">Home</a>
+            <a href="/" class="text-sm font-medium tracking-wide uppercase ${activePage === 'home' ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors">Home</a>
 
             <div class="nav-item relative">
-              <a href="${base}/services/index.html" class="text-sm font-medium tracking-wide uppercase ${isServices ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors flex items-center gap-1">
+              <a href="/services/" class="text-sm font-medium tracking-wide uppercase ${isServices ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors flex items-center gap-1">
                 Services
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
               </a>
@@ -83,8 +82,8 @@ function renderHeader(activePage) {
               </div>
             </div>
 
-            <a href="${base}/about.html" class="text-sm font-medium tracking-wide uppercase ${activePage === 'about' ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors">About Us</a>
-            <a href="${base}/contact.html" class="text-sm font-medium tracking-wide uppercase ${activePage === 'contact' ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors">Contact</a>
+            <a href="/about/" class="text-sm font-medium tracking-wide uppercase ${activePage === 'about' ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors">About Us</a>
+            <a href="/contact/" class="text-sm font-medium tracking-wide uppercase ${activePage === 'contact' ? 'text-[#A3E635]' : 'text-gray-300 hover:text-[#A3E635]'} transition-colors">Contact</a>
           </nav>
 
           <div class="hidden lg:block">
@@ -99,11 +98,11 @@ function renderHeader(activePage) {
 
       <div id="mobile-menu" class="mobile-menu lg:hidden bg-[#0D0D0D] border-t border-[#1f1f1f]">
         <div class="px-4 py-4 space-y-1">
-          <a href="${base}/index.html" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">Home</a>
-          <a href="${base}/services/index.html" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">Services</a>
+          <a href="/" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">Home</a>
+          <a href="/services/" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">Services</a>
           ${mobileServicesLinks}
-          <a href="${base}/about.html" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">About Us</a>
-          <a href="${base}/contact.html" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">Contact</a>
+          <a href="/about/" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">About Us</a>
+          <a href="/contact/" class="block py-3 text-sm font-medium uppercase tracking-wide text-gray-300 hover:text-[#A3E635]">Contact</a>
           <a href="/quote" class="btn-accent block text-center mt-4 px-6 py-3 rounded font-semibold text-sm tracking-wide uppercase">Get a Free Quote</a>
         </div>
       </div>
@@ -112,9 +111,8 @@ function renderHeader(activePage) {
 }
 
 function renderFooter() {
-  const base = getBasePath();
   const serviceLinks = SERVICES.map(
-    (s) => `<li><a href="${base}${s.href.replace(/^\./, '')}" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">${s.title}</a></li>`
+    (s) => `<li><a href="${s.href}" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">${s.title}</a></li>`
   ).join('');
 
   return `
@@ -122,8 +120,8 @@ function renderFooter() {
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           <div>
-            <img src="${base}/assets/logo.png" alt="${SITE.name}" class="h-10 w-auto mb-6" />
-            <p class="text-gray-400 text-sm leading-relaxed">Premium commercial signage, vehicle graphics, and trade-quality printing for businesses that demand visibility and craftsmanship.</p>
+            <img src="/assets/logo.png" alt="${SITE.name} — Charlotte, NC" class="h-10 w-auto mb-6" />
+            <p class="text-gray-400 text-sm leading-relaxed">Charlotte sign shop for commercial signage, vehicle wraps, storefront graphics, and trade-quality printing.</p>
           </div>
           <div>
             <h4 class="text-[#A3E635] font-semibold uppercase tracking-wider text-sm mb-4">Services</h4>
@@ -132,9 +130,10 @@ function renderFooter() {
           <div>
             <h4 class="text-[#A3E635] font-semibold uppercase tracking-wider text-sm mb-4">Company</h4>
             <ul class="space-y-2">
-              <li><a href="${base}/about.html" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">About Us</a></li>
-              <li><a href="${base}/contact.html" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">Contact</a></li>
+              <li><a href="/about/" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">About Us</a></li>
+              <li><a href="/contact/" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">Contact</a></li>
               <li><a href="/quote" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">Request a Quote</a></li>
+              <li><a href="/privacy" class="text-gray-400 hover:text-[#A3E635] transition-colors text-sm">Privacy Policy</a></li>
             </ul>
           </div>
           <div>
