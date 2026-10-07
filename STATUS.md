@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-09-12 (SEO pass: fixed 404s, Charlotte on homepage, service pages, sitemap/schema)
+- **Tech last updated:** 2026-10-07 (GSC “Page with redirect” is the `/quote` and `/privacy` slash 301s; sitemap/canonicals pointed at trailing-slash URLs)
 - **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
@@ -48,7 +48,10 @@
 
 | Item | Status | Blocker |
 |------|--------|---------|
-| Local SEO foundation (pages, sitemap, 404 fixes) | **DONE 2026-09-12** — pushed; wait for Netlify then submit sitemap | Owner: Search Console + GBP |
+| Local SEO foundation (pages, sitemap, 404 fixes) | **DONE 2026-09-12** — site live | Sitemap submit still owner/GSC if not already done |
+| GBP website + post | **DONE 2026-09-29** — Admin set website to `/quote`, published 1 Update post with Learn more → `/quote` | — |
+| GBP custom services (9) | Submitted 2026-09-29 under Sign shop | Google review, up to 1 day |
+| GBP Q&A | Skipped | Google does not show Q&A on this listing (Search, Maps, or Edit profile) |
 | Resend domain verification | Not started | Need to add DNS records for creativstudio.co in Resend |
 | GTM conversion event tags (Lead, Contact) | **LIVE** — published as GTM v2 (2026-08-30) | — |
 | SMS lead notifications | Not started (owner approved) | — |
@@ -64,7 +67,7 @@
 | `CS-META-FLEET-FORM-V01` image | **PAUSED.** $54 spend, 1 lead, $1,600 quote — customer went dark on price. | — |
 | `CS-META-FLEET-FORM-V02` 40s video | **PAUSED 2026-09-07.** ~6 Instant Form leads, ~$19 CPL. 2 answered the phone, 0 came back. Hook 31%, avg watch 4s. | Recut to 12–15s before relaunch |
 | Next paid | Short video, same Instant Form, $25/day. Not sending traffic to `/quote` yet. | Waiting on new video file |
-| Google Business Profile | Verified, category Sign shop. Audit still queued. | None |
+| Google Business Profile | Verified, Sign shop. Website `/quote` live. 9 new services pending Google review. 1 Update post live. Reviews already replied. Q&A not available on this listing. | Ads remain off |
 
 > **Marketing P0 fully resolved (Tech, 2026-08-30):** All conversion tags published in GTM v2 and `Lead` event verified in Events Manager → Test Events (Processed at 3:31 PM). Marketing is clear to build conversion-objective campaigns.
 

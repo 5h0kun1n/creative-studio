@@ -37,10 +37,12 @@ You do not have this Cursor session. Options, in order:
 ## Business Profile
 
 - Edit the existing Creative Studio listing only.
-- Website: `https://creativstudio.co/quote`
+- Website: `https://creativstudio.co/quote` (Maps may display only the domain; that is fine if the link opens `/quote`).
 - NAP: Creative Studio, 658 Griffith Rd, Ste 119, Charlotte, NC 28217, (704) 312-0219
 - Hours: Mon–Fri 7:00 AM–5:00 PM, Sat by appointment, Sun closed
 - Category: Sign shop
+- Q&A is not available on this listing. Do not post the answers elsewhere as a substitute.
+- Reviews are already replied. Do not reply again unless a new review has no owner response.
 - Copy the Ask-for-reviews URL and the public Maps URL.
 
 ## Report back (plain text the owner pastes into Tech chat)

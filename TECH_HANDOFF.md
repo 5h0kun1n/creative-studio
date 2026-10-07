@@ -264,8 +264,24 @@ Free tier available. See Tech for setup when the time comes.
 
 - Homepage title now includes **Charlotte, NC**. All quote CTAs go to `/quote` (old `/contact` 404s are gone).
 - New service pages are valid landing URLs for search and for future website campaigns. Optional quote preselect: `/quote?service=vehicle_wraps` (also `custom_signs`, `3d_lettering`, `storefront_window`, `banners`, `promo_products`).
-- **Owner still needs to:** add the sitemap in [Google Search Console](https://search.google.com/search-console) (`https://creativstudio.co/sitemap.xml`), finish the Google Business Profile audit, and ask customers for Google reviews. That work is not in this repo.
+- GSC email “Page with redirect” (2026-10-07): expected, not a penalty. `/quote` and `/privacy` 301 to trailing-slash URLs. Sitemap + canonicals updated to `/quote/` and `/privacy/` so Google requests the 200 pages. Old `.html` paths still 301 on purpose.
 
 ---
 
-*Last updated: 2026-09-12*
+## Google Business Profile (2026-09-29)
+
+Public Maps listing: [Creative Studio - Custom Signs](https://www.google.com/maps/place/Creative+Studio+-+Custom+Signs/@35.1592557,-80.8830045,17z/data=!3m1!4b1!4m6!3m5!1s0x88569f8197d6db4f:0xd38fe9feecd1d495!8m2!3d35.1592557!4d-80.8830045!16s%2Fg%2F11z1x96jbv) — 658 Griffith Rd Ste 119, Charlotte, NC 28217. Category: Sign shop. Ask-for-reviews: `https://g.page/r/CZXU0ez-6Y_TEBM/review`.
+
+| Item | Status |
+|------|--------|
+| Website button | Label shows `creativstudio.co`. Destination is `https://creativstudio.co/quote` (verified on public Maps 2026-09-29). |
+| Update post | Live: “Fleet wrap finished this week in Charlotte…” + Learn more → `/quote`. Older post from Jun 19, 2026 left in place. |
+| Custom services (9) | Submitted under Sign shop: Vehicle wraps, Fleet graphics, Custom signs, 3D letters, Storefront graphics, Window lettering, Banners, Commercial printing, Branded apparel. Pending Google review (up to 1 day). Existing 7 kept. |
+| Q&A | Not available on this listing (Search, Maps, or Edit profile). Do not invent a substitute. |
+| Reviews | Owner already replied to all existing reviews. Do not reply again. |
+
+Meta ads stay off until the owner turns them back on.
+
+---
+
+*Last updated: 2026-10-07*
