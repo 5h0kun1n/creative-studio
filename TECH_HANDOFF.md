@@ -265,6 +265,7 @@ Free tier available. See Tech for setup when the time comes.
 - Homepage title now includes **Charlotte, NC**. All quote CTAs go to `/quote` (old `/contact` 404s are gone).
 - New service pages are valid landing URLs for search and for future website campaigns. Optional quote preselect: `/quote?service=vehicle_wraps` (also `custom_signs`, `3d_lettering`, `storefront_window`, `banners`, `promo_products`).
 - GSC email “Page with redirect” (2026-10-07): expected, not a penalty. `/quote` and `/privacy` 301 to trailing-slash URLs. Sitemap + canonicals updated to `/quote/` and `/privacy/` so Google requests the 200 pages. Old `.html` paths still 301 on purpose.
+- GSC still lists `/services/` as a 404 from a **Sep 4** crawl. Live URL is 200. Admin requested indexing on 2026-10-07. Do not click Validate fix. Sitemap is **Success** (submitted 2026-09-12, last read 2026-10-03, 11 pages). Waiting on Google recrawl.
 
 ---
 

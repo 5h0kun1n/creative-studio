@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-10-07 (GSC “Page with redirect” is the `/quote` and `/privacy` slash 301s; sitemap/canonicals pointed at trailing-slash URLs)
+- **Tech last updated:** 2026-10-07 (GSC sitemap Success, 11 pages. `/services/` 404 is stale; indexing already requested. Waiting on Google recrawl.)
 - **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
@@ -48,7 +48,9 @@
 
 | Item | Status | Blocker |
 |------|--------|---------|
-| Local SEO foundation (pages, sitemap, 404 fixes) | **DONE 2026-09-12** — site live | Sitemap submit still owner/GSC if not already done |
+| Local SEO foundation (pages, sitemap, 404 fixes) | **DONE 2026-09-12** — site live | — |
+| GSC `/services/` 404 | Stale. Live test 200 on 2026-10-07. Indexing requested. | Wait for Google recrawl. Do not Validate fix. |
+| GSC sitemap.xml | **Success** — submitted 2026-09-12, last read 2026-10-03, 11 pages discovered | — |
 | GBP website + post | **DONE 2026-09-29** — Admin set website to `/quote`, published 1 Update post with Learn more → `/quote` | — |
 | GBP custom services (9) | Submitted 2026-09-29 under Sign shop | Google review, up to 1 day |
 | GBP Q&A | Skipped | Google does not show Q&A on this listing (Search, Maps, or Edit profile) |
