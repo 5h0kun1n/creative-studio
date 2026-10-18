@@ -62,7 +62,7 @@ Property `[creativstudio.co](https://creativstudio.co/)` ID `559502591`. Web str
 | `QuoteSubmitted`   | `generate_lead`  | Same trigger as Meta Lead |
 | `Call`             | `phone_call`     | Same trigger as Meta Contact |
 
-Mark `generate_lead` and `phone_call` as key events in GA4 once they appear (~24h). Admin can do that.
+Realtime check 2026-10-18: 1 `page_view` on one homepage load, 1 `phone_call` from the tel link. `generate_lead` not tested (no quote submitted). Mark `phone_call` as a key event now; mark `generate_lead` after the first quote.
 
 ---
 

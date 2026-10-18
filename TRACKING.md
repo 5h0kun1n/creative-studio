@@ -225,8 +225,8 @@ Recommendation: Start with option 1 for shop events. Add option 3 later for quot
 - [x] Property `559502591`, stream `G-Z09JB98VQC` — Google tag in **GTM-PV35GJLJ** v4 (2026-10-18)
 - [x] `QuoteSubmitted` → GA4 `generate_lead`
 - [x] `Call` → GA4 `phone_call`
-- [ ] Admin: confirm `page_view`, `generate_lead`, `phone_call` in GA4 Realtime
-- [ ] Admin: mark `generate_lead` and `phone_call` as key events after they appear (~24h)
+- [x] Admin: Realtime 2026-10-18 — 1 `page_view` (no double count), 1 `phone_call`. `generate_lead` not tested.
+- [ ] Admin: mark `phone_call` as a key event. Mark `generate_lead` after the first quote fires.
 
 Do **not** add `gtag.js` to HTML. Do **not** use container `GTM-K489VXFR` on this site.
 
