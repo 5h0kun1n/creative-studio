@@ -62,7 +62,7 @@ Property `[creativstudio.co](https://creativstudio.co/)` ID `559502591`. Web str
 | `QuoteSubmitted`   | `generate_lead`  | Same trigger as Meta Lead |
 | `Call`             | `phone_call`     | Same trigger as Meta Contact |
 
-Realtime check 2026-10-18: 1 `page_view` on one homepage load, 1 `phone_call` from the tel link. `generate_lead` not tested (no quote submitted). Mark `phone_call` as a key event now; mark `generate_lead` after the first quote.
+Realtime check 2026-10-18: 1 `page_view` on one homepage load, 1 `phone_call` from the tel link. `generate_lead` not tested (no quote submitted). Admin → Events still empty (GA 24h delay). Recheck ~9 AM ET 2026-10-19 and mark `phone_call` when listed. Mark `generate_lead` after the first quote. Leave Google default key events alone.
 
 ---
 

@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-10-18 (GA4 Realtime: 1 page_view, 1 phone_call. generate_lead still needs a quote.)
+- **Tech last updated:** 2026-10-18 (GA4 Realtime passed. Key event mark waits for Events list ~24h. Admin recheck 2026-10-19 9 AM ET.)
 - **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
@@ -57,7 +57,7 @@
 | GBP Q&A | Skipped | Google does not show Q&A on this listing (Search, Maps, or Edit profile) |
 | Resend domain verification | Not started | Need to add DNS records for creativstudio.co in Resend |
 | GTM conversion event tags (Lead, Contact) | **LIVE** — published as GTM v2 (2026-08-30) | — |
-| GA4 via GTM v4 | **LIVE.** Realtime 2026-10-18: 1 `page_view` (no double count), 1 `phone_call`. `generate_lead` not tested (no quote). | Admin: mark `phone_call` as key event; mark `generate_lead` after first quote |
+| GA4 via GTM v4 | **LIVE.** Realtime 2026-10-18: 1 `page_view`, 1 `phone_call`. Events list still 0 (GA 24h delay). | Admin: check ~9 AM ET 2026-10-19; mark `phone_call` when listed. Leave `generate_lead` until a quote fires. |
 | SMS lead notifications | Not started (owner approved) | — |
 | Shopify store DNS (shop.creativstudio.co) | Not started | Need CNAME added in domain registrar |
 | tracking.js on homepage | **LIVE** — deployed via Netlify auto-deploy from GitHub (2026-08-30) | — |
