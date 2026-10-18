@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-10-07 (GSC sitemap Success, 11 pages. `/services/` 404 is stale; indexing already requested. Waiting on Google recrawl.)
+- **Tech last updated:** 2026-10-18 (GA4 live in GTM v4 as G-Z09JB98VQC. Removed second GTM load + GTM-XXXXXXX comment. Do not add gtag.js.)
 - **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
@@ -19,7 +19,8 @@
 | Main site | https://creativstudio.co | Pre-existing |
 | Quote form | https://creativstudio.co/quote | 2026-08-30 |
 | Thank-you page | https://creativstudio.co/thank-you | 2026-08-30 |
-| GTM container | GTM-PV35GJLJ (on all pages via snippet injection) | 2026-08-30 |
+| GTM container | GTM-PV35GJLJ (on all pages via Netlify snippet only) | 2026-08-30 |
+| GA4 | Property 559502591 / `G-Z09JB98VQC` via GTM v4 (`page_view`, `generate_lead`, `phone_call`) | 2026-10-18 |
 | Meta Pixel | 1086783920528382 (PageView on all pages via GTM) | 2026-08-30 |
 | Resend email notifications | Branded lead alert + customer auto-reply | 2026-08-30 |
 | Netlify Forms | Quote form capture + email notification | 2026-08-30 |
@@ -56,6 +57,7 @@
 | GBP Q&A | Skipped | Google does not show Q&A on this listing (Search, Maps, or Edit profile) |
 | Resend domain verification | Not started | Need to add DNS records for creativstudio.co in Resend |
 | GTM conversion event tags (Lead, Contact) | **LIVE** — published as GTM v2 (2026-08-30) | — |
+| GA4 via GTM v4 | **LIVE** in published container. Site no longer loads GTM twice. | Admin: Realtime test + mark key events after ~24h |
 | SMS lead notifications | Not started (owner approved) | — |
 | Shopify store DNS (shop.creativstudio.co) | Not started | Need CNAME added in domain registrar |
 | tracking.js on homepage | **LIVE** — deployed via Netlify auto-deploy from GitHub (2026-08-30) | — |

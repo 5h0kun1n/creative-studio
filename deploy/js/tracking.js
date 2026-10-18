@@ -6,10 +6,11 @@
  * Shopify pages use GTM directly (installed in theme.liquid).
  *
  * Usage:
- *   <script src="/js/tracking.js" data-gtm="GTM-PV35GJLJ"></script>
+ *   <script src="/js/tracking.js"></script>
  *
- * Replace GTM-XXXXXXX with your real GTM container ID.
- * Meta Pixel is loaded inside GTM (not here) so it stays in one place.
+ * GTM-PV35GJLJ is loaded by the Netlify snippet, not this file.
+ * Do not add gtag.js or a second GTM snippet — GA4 would count every visit twice.
+ * Optional data-gtm="GTM-..." only on a page that has no other GTM install.
  */
 
 (function () {
@@ -25,8 +26,17 @@
   // ---------------------------------------------------------------------------
   var scriptTag = document.currentScript;
   var gtmId = scriptTag && scriptTag.getAttribute('data-gtm');
+  var gtmAlreadyStarted = false;
+  if (window.dataLayer) {
+    for (var di = 0; di < window.dataLayer.length; di++) {
+      if (window.dataLayer[di] && window.dataLayer[di].event === 'gtm.js') {
+        gtmAlreadyStarted = true;
+        break;
+      }
+    }
+  }
 
-  if (gtmId) {
+  if (gtmId && !gtmAlreadyStarted && !window.google_tag_manager) {
     (function (w, d, s, l, i) {
       w[l] = w[l] || [];
       w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });

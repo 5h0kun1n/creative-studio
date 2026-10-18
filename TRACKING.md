@@ -30,7 +30,7 @@
 
 - [x] Add GTM snippet to `<head>` of every page — installed via **Netlify snippet injection** (2026-08-30)
 - [x] Add GTM noscript to `<body>` of every page — installed via **Netlify snippet injection** (2026-08-30)
-- [x] The `tracking.js` file handles UTM capture, event helpers, and click-to-call binding
+- [x] The `tracking.js` file handles UTM capture, event helpers, and click-to-call binding. It does **not** load GTM (Netlify snippet does). Do not add `gtag.js`.
 
 **Test:**
 1. Open creativstudio.co in Chrome
@@ -220,6 +220,18 @@ Recommendation: Start with option 1 for shop events. Add option 3 later for quot
 
 ---
 
+## GA4 (via GTM, not site code)
+
+- [x] Property `559502591`, stream `G-Z09JB98VQC` — Google tag in **GTM-PV35GJLJ** v4 (2026-10-18)
+- [x] `QuoteSubmitted` → GA4 `generate_lead`
+- [x] `Call` → GA4 `phone_call`
+- [ ] Admin: confirm `page_view`, `generate_lead`, `phone_call` in GA4 Realtime
+- [ ] Admin: mark `generate_lead` and `phone_call` as key events after they appear (~24h)
+
+Do **not** add `gtag.js` to HTML. Do **not** use container `GTM-K489VXFR` on this site.
+
+---
+
 ## Quick Reference: dataLayer Events
 
 These events are pushed by `tracking.js` and can be used as GTM triggers:
@@ -251,4 +263,4 @@ window.dataLayer.push({
 
 ---
 
-*Last updated: 2026-08-30*
+*Last updated: 2026-10-18*

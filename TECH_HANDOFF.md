@@ -34,8 +34,8 @@ Use these EXACT names in all reporting and ad platform configuration.
 
 | Event               | Fires when                                      | Platform          |
 |---------------------|------------------------------------------------|-------------------|
-| `QuoteSubmitted`    | User submits the quote request form             | GTM → Meta, GAds  |
-| `Call`              | User taps click-to-call or tel: link            | GTM → Meta, GAds  |
+| `QuoteSubmitted`    | User submits the quote request form             | GTM → Meta + GA4  |
+| `Call`              | User taps click-to-call or tel: link            | GTM → Meta + GA4  |
 | `Purchase`          | Shopify checkout complete                       | Shopify → Meta    |
 | `CompanyStoreStart` | Client begins company store setup/inquiry       | GTM → Meta        |
 | `PageView`          | Every page load (automatic via Meta Pixel)      | Meta Pixel        |
@@ -51,6 +51,18 @@ Use these EXACT names in all reporting and ad platform configuration.
 | `Call`              | `Contact`              | `content_name: "call"` |
 | `Purchase`          | `Purchase`             | `value`, `currency`  |
 | `CompanyStoreStart` | `Lead`                 | `content_name: "company_store"` |
+
+### GA4 event mapping (GTM v4, 2026-10-18)
+
+Property `[creativstudio.co](https://creativstudio.co/)` ID `559502591`. Web stream measurement ID `G-Z09JB98VQC` (copy from GA → Admin → Data streams; do not retype). Loaded only via **GTM-PV35GJLJ**. Do not add `gtag.js` in site code. Leave `GTM-K489VXFR` alone — the site does not load it.
+
+| dataLayer event    | GA4 event        | Notes |
+|--------------------|------------------|-------|
+| (All Pages)        | `page_view`      | Enhanced measurement + Google tag |
+| `QuoteSubmitted`   | `generate_lead`  | Same trigger as Meta Lead |
+| `Call`             | `phone_call`     | Same trigger as Meta Contact |
+
+Mark `generate_lead` and `phone_call` as key events in GA4 once they appear (~24h). Admin can do that.
 
 ---
 
@@ -242,7 +254,8 @@ This is already working on the Tech PC. Marketing needs to set it up on their ma
 | Item | Value |
 |------|-------|
 | Meta Pixel ID | `1086783920528382` |
-| GTM Container | `GTM-PV35GJLJ` |
+| GTM Container | `GTM-PV35GJLJ` (do not load `GTM-K489VXFR`) |
+| GA4 | `G-Z09JB98VQC` via GTM only — no `gtag.js` in site code |
 | MCP endpoint | `https://meta-ads.mcp.pipeboard.co/` |
 
 ### Troubleshooting
@@ -285,4 +298,4 @@ Meta ads stay off until the owner turns them back on.
 
 ---
 
-*Last updated: 2026-10-07*
+*Last updated: 2026-10-18*
