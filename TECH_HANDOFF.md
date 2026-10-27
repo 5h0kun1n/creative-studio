@@ -62,7 +62,7 @@ Property `[creativstudio.co](https://creativstudio.co/)` ID `559502591`. Web str
 | `QuoteSubmitted`   | `generate_lead`  | Same trigger as Meta Lead |
 | `Call`             | `phone_call`     | Same trigger as Meta Contact |
 
-Realtime check 2026-10-18: 1 `page_view` on one homepage load, 1 `phone_call` from the tel link. `generate_lead` not tested (no quote submitted). Admin → Events still empty (GA 24h delay). Recheck ~9 AM ET 2026-10-19 and mark `phone_call` when listed. Mark `generate_lead` after the first quote. Leave Google default key events alone.
+Realtime check 2026-10-18: 1 `page_view` on one homepage load, 1 `phone_call` from the tel link. `phone_call` marked as a key event 2026-10-19. `generate_lead` not listed yet — mark it after the first quote. Leave Google default key events alone.
 
 ---
 
@@ -275,7 +275,7 @@ Free tier available. See Tech for setup when the time comes.
 
 ## SEO notes for Marketing (2026-09-12)
 
-- Homepage title now includes **Charlotte, NC**. All quote CTAs go to `/quote` (old `/contact` 404s are gone).
+- Homepage title and H1 (2026-10-21): `Custom Signs, Vehicle Graphics & Printing in Charlotte, NC`. Opening paragraph still leads with custom signs and keeps letters, fleet graphics, and print. Quote button remains **Get a Free Quote**. After this is pushed, Admin can request indexing for `/` only.
 - New service pages are valid landing URLs for search and for future website campaigns. Optional quote preselect: `/quote?service=vehicle_wraps` (also `custom_signs`, `3d_lettering`, `storefront_window`, `banners`, `promo_products`).
 - GSC email “Page with redirect” (2026-10-07): expected, not a penalty. `/quote` and `/privacy` 301 to trailing-slash URLs. Sitemap + canonicals updated to `/quote/` and `/privacy/` so Google requests the 200 pages. Old `.html` paths still 301 on purpose.
 - GSC still lists `/services/` as a 404 from a **Sep 4** crawl. Live URL is 200. Admin requested indexing on 2026-10-07. Do not click Validate fix. Sitemap is **Success** (submitted 2026-09-12, last read 2026-10-03, 11 pages). Waiting on Google recrawl.
@@ -298,4 +298,4 @@ Meta ads stay off until the owner turns them back on.
 
 ---
 
-*Last updated: 2026-10-18*
+*Last updated: 2026-10-21*
