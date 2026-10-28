@@ -7,7 +7,7 @@
 ---
 
 ## Last sync
-- **Tech last updated:** 2026-10-27 (homepage title/H1 lead with custom signs; vehicle graphics and printing stay. Quote button unchanged.)
+- **Tech last updated:** 2026-10-28 (homepage title live. Admin requested indexing. Google’s last crawl is still Oct 25, before the new title.)
 - **Marketing last updated:** 2026-09-07 (ads paused; video recut in progress)
 
 ---
@@ -51,6 +51,7 @@
 |------|--------|---------|
 | Local SEO foundation (pages, sitemap, 404 fixes) | **DONE 2026-09-12** — site live | — |
 | GSC `/services/` 404 | Stale. Live test 200 on 2026-10-07. Indexing requested. | Wait for Google recrawl. Do not Validate fix. |
+| GSC homepage title | Live title confirmed 2026-10-28. Indexing requested once. | Last indexed crawl is Oct 25 (old title). Wait for the next crawl. Do not request again. |
 | GSC sitemap.xml | **Success** — submitted 2026-09-12, last read 2026-10-03, 11 pages discovered | — |
 | GBP website + post | **DONE 2026-09-29** — Admin set website to `/quote`, published 1 Update post with Learn more → `/quote` | — |
 | GBP custom services (9) | Submitted 2026-09-29 under Sign shop | Google review, up to 1 day |
