@@ -225,9 +225,9 @@ Recommendation: Start with option 1 for shop events. Add option 3 later for quot
 - [x] Property `559502591`, stream `G-Z09JB98VQC` — Google tag in **GTM-PV35GJLJ** v4 (2026-10-18)
 - [x] `QuoteSubmitted` → GA4 `generate_lead`
 - [x] `Call` → GA4 `phone_call`
-- [x] Admin: Realtime 2026-10-18 — 1 `page_view` (no double count), 1 `phone_call`. `generate_lead` not tested.
+- [x] Admin: Realtime 2026-10-18 — 1 `page_view` (no double count), 1 `phone_call`.
 - [x] Admin: `phone_call` marked as a key event 2026-10-19 (star stayed on after reload).
-- [ ] Admin: mark `generate_lead` as a key event after the first quote fires.
+- [x] Admin: `generate_lead` listed (4 fires, Oct 19–Nov 1) and marked as a key event 2026-11-04.
 
 Do **not** add `gtag.js` to HTML. Do **not** use container `GTM-K489VXFR` on this site.
 
@@ -264,4 +264,4 @@ window.dataLayer.push({
 
 ---
 
-*Last updated: 2026-10-18*
+*Last updated: 2026-11-04*

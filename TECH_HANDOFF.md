@@ -62,7 +62,7 @@ Property `[creativstudio.co](https://creativstudio.co/)` ID `559502591`. Web str
 | `QuoteSubmitted`   | `generate_lead`  | Same trigger as Meta Lead |
 | `Call`             | `phone_call`     | Same trigger as Meta Contact |
 
-Realtime check 2026-10-18: 1 `page_view` on one homepage load, 1 `phone_call` from the tel link. `phone_call` marked as a key event 2026-10-19. `generate_lead` not listed yet — mark it after the first quote. Leave Google default key events alone.
+Realtime check 2026-10-18: 1 `page_view` on one homepage load, 1 `phone_call` from the tel link. `phone_call` marked as a key event 2026-10-19. `generate_lead` marked as a key event 2026-11-04 after 4 fires (Oct 19–Nov 1). Key events are now `close_convert_lead`, `generate_lead`, `phone_call`, `purchase`, and `qualify_lead`. Leave Google’s defaults alone. Promo apparel and storefront page improvements are on hold until the site update and apparel ecommerce launch.
 
 ---
 
@@ -298,4 +298,4 @@ Meta ads stay off until the owner turns them back on.
 
 ---
 
-*Last updated: 2026-10-28*
+*Last updated: 2026-11-04*
